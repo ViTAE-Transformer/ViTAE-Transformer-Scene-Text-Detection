@@ -54,10 +54,10 @@ Get inference results on ICDAR2019 ArT test set with visualization images, txt f
 
 ```
 python demo/art_demo.py --config configs/i3cl_vitae_fpn/i3cl_vitae_fpn_ms_train.py \
---checkpoint out_dir/epoch_12.pth --score-thr 0.45 --json_file art_1.json
+--checkpoint out_dir/epoch_12.pth --score-thr 0.45 --json_file art_test.json
 ```
 
-*Note: Change the path for saving visualizations and txt files if needed.*
+*Note: Then upload the json file to [Link](https://rrc.cvc.uab.es/?ch=14&com=mymethods&task=1) for Recall, Precision and F1 evaluation results. Change the path for saving visualizations and txt files if needed.*
 
 ## Statement
 
