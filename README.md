@@ -1,4 +1,4 @@
-<h1 align="center"> An Empirical Study of Remote Sensing Pretraining </h1> 
+<h1 align="center"> I3CL: Intra- and Inter-Instance Collaborative Learning for Arbitrary-shaped Scene Text Detection </h1> 
 
 <p align="center">
 <a href="http://arxiv.org"><img src="https://img.shields.io/badge/arXiv-Paper-<color>"></a>
