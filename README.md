@@ -6,17 +6,12 @@
 
 <p align="center">
   <a href="#updates">Updates</a> |
+  <a href="#todo">TODO</a> |
   <a href="#introduction">Introduction</a> |
   <a href="#results">Results</a> |
   <a href="#usage">Usage</a> |
   <a href="#statement">Statement</a> |
 </p >
-
-## Updates
-
-***09/04/2022***
-
-The code will be uploaded.
 
 ## Introduction
 
@@ -24,7 +19,18 @@ This is the repo for the paper "I3CL: Intra- and Inter-Instance Collaborative Le
 
 //structure img
 
-Note that I3CL model is equiped with the ViTAE-v2 backbone and implemented in mmdetection codebase in this repo.
+Note that I3CL model is equiped with the ViTAE-v2 backbone and implemented in [mmdetection]([https://github.com/open-mmlab/mmdetection) codebase in this repo.
+
+## Updates
+
+***09/04/2022***
+
+The code will be uploaded. Private github repo temporarily.
+
+## TODO
+
+- [ ] Update the SSL result with ViTAE backbone on ArT.
+- [ ] Fix the bug that fails to train using more than one image per GPU.
 
 ## Results
 
