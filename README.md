@@ -44,7 +44,7 @@ The results are tested in single scale setting. The shorter side is resized to 1
 
 //to be updated
 
-### Data Prepare
+### Prepare Data
 
 //to be updated
 
