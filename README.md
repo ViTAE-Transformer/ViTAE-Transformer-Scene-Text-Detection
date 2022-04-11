@@ -13,8 +13,8 @@
   <a href="#statement">Statement</a> |
 </p >
 
-This is the repo for the paper "I3CL: Intra- and Inter-Instance Collaborative Learning for Arbitrary-shaped Scene Text Detection". 
-Note that I3CL is equiped with the ViTAE(20M params.) backbone in this repo.
+*This is the repo for the paper "I3CL: Intra- and Inter-Instance Collaborative Learning for Arbitrary-shaped Scene Text Detection". 
+Note that I3CL is equiped with the ViTAE(20M params.) backbone in this repo.*
 
 ## Introduction
 
@@ -54,18 +54,18 @@ This implementation:
 
 |Backbone|Model Link|Training Data|Recall|Precision|F-measure|
 |:------:|:------:|:------:|:------:|:------:|:------:|
-|ViTAE [this implementation]|[Link(to be updated)]()|LSVT+MLT19+ArT|75.42|82.82|78.95|
-|ViTAE+SSL [this implementation]|[Link(to be updated)]()|LSVT+MLT19+ArT+SSL data|-|-|to be updated|
+|<p>ViTAE<br>[this implementation]</p>|[Link(to be updated)]()|LSVT+MLT19+ArT|75.42|82.82|78.95|
+|<p>ViTAE+SSL<br>[this implementation]</p>|[Link(to be updated)]()|LSVT+MLT19+ArT+SSL data|-|-|to be updated|
 
 ResNet-series in paper:
 
 |Backbone|Training Data|Recall|Precision|F-measure|
 |:------:|:------:|:------:|:------:|:------:|
-|ResNet-50 [paper]|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT|71.3|82.7|76.6|
-|ResNet-50+SSL [paper]|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT+SSL data|72.2|83.6|77.5|
-|ResNeXt-101+SSL [paper]|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT+SSL data|74.1|85.5|79.4|
-|ResNeSt-101+SSL [paper]|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT+SSL data|75.1|86.3|80.3|
-|ResNeXt-151+SSL [paper]|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT+SSL data|74.9|86.0|80.1|
+|<p>ResNet-50<br>[paper]</p>|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT|71.3|82.7|76.6|
+|<p>ResNet-50+SSL<br>[paper]</p>|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT+SSL data|72.2|83.6|77.5|
+|<p>ResNeXt-101+SSL<br>[paper]</p>|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT+SSL data|74.1|85.5|79.4|
+|<p>ResNeSt-101+SSL<br>[paper]</p>|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT+SSL data|75.1|86.3|80.3|
+|<p>ResNeXt-151+SSL<br>[paper]</p>|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT+SSL data|74.9|86.0|80.1|
 
 The result of ViTAE is tested in single scale setting without any testing trick. The shorter side is resized to 1185. The submission json file to evaluation website can be downloaded
 here ([Link_to_be_updated]()). 
@@ -115,7 +115,7 @@ for backbone initialization. Please put it in [pretrained_model/ViTAE](./pretrai
 - We use coco format training datasets. Some offline augmented ArT training datasets are used. You can download 
 correspoding datasets in config file from here and put them in [data/](./data):
 
-    |Dataset|Link (Google Drive)|Link (Baidu Wangpan百度网盘)|
+    |Dataset|<p>Link<br>(Google Drive)</p>|<p>Link<br>(Baidu Wangpan百度网盘)</p>|
     |:------:|:------:|:------:|
     |art|[Link]()|[Link]() (pw: )|
     |art_light|[Link]()|[Link]() (pw: )|
