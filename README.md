@@ -7,10 +7,10 @@
 <p align="center">
   <a href="#introduction">Introduction</a> |
   <a href="#updates">Updates</a> |
-  <a href="#todo">TODO</a> |
   <a href="#results">Results</a> |
   <a href="#usage">Usage</a> |
-  <a href="#statement">Statement</a> |
+  <a href="#citation">Citation</a> |
+  <a href="#acknowledgment">Acknowledgment</a> |
 </p >
 
 *This is the repo for the paper "I3CL: Intra- and Inter-Instance Collaborative Learning for Arbitrary-shaped Scene Text Detection". 
