@@ -16,6 +16,20 @@
 *This is the repo for the paper "I3CL: Intra- and Inter-Instance Collaborative Learning for Arbitrary-shaped Scene Text Detection". 
 Note that I3CL is equiped with the ViTAE(20M params.) backbone in this repo.*
 
+## Other Links
+
+> **Image Classification**: Please see <a href="https://github.com/ViTAE-Transformer/ViTAE-Transformer/tree/main/Image-Classification">ViTAE-Transformer for image classification</a>;
+
+> **Object Detection**: Please see <a href="https://github.com/ViTAE-Transformer/ViTAE-Transformer/tree/main/Object-Detection">ViTAE-Transformer for object detection</a>;
+
+> **Sementic Segmentation**: Please see <a href="https://github.com/ViTAE-Transformer/ViTAE-Transformer/tree/main/Semantic-Segmentation">ViTAE-Transformer for semantic segmentation</a>;
+
+> **Animal Pose Estimation**: Please see <a href="https://github.com/ViTAE-Transformer/ViTAE-Transformer/tree/main/Animal-Pose-Estimation">ViTAE-Transformer for animal pose estimation</a>;
+
+> **Matting**: Please see <a href="https://github.com/ViTAE-Transformer/ViTAE-Transformer-Matting">ViTAE-Transformer for matting</a>;
+
+> **Remote Sensing**: Please see <a href="https://github.com/ViTAE-Transformer/ViTAE-Transformer-Remote-Sensing">ViTAE-Transformer for Remote Sensing</a>;
+
 ## Introduction
 
 Existing methods for arbitrary-shaped text detection in natural scenes face two critical issues, i.e., 1) 
@@ -48,14 +62,14 @@ Example results from paper.
 
 ![image](./demo.jpg)
 
-Evaluation results of I3CL with different backbone on ArT.
+Evaluation results of I3CL with different backbones on ArT.
 
 This implementation:
 
-|Backbone|Model Link|Training Data|Recall|Precision|F-measure|
-|:------:|:------:|:------:|:------:|:------:|:------:|
-|<p>ViTAE<br>[this implementation]</p>|[Link(to be updated)]()|LSVT+MLT19+ArT|75.42|82.82|78.95|
-|<p>ViTAE+SSL<br>[this implementation]</p>|[Link(to be updated)]()|LSVT+MLT19+ArT+SSL data|-|-|to be updated|
+|Backbone|Model Link|Training Data|Recall|Precision|F-measure|Submission JSON|
+|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|<p>ViTAE<br>[this implementation]</p>|[Link(to be updated)]()|LSVT+MLT19+ArT|75.42|82.82|78.95|[Link]()|
+|<p>ViTAE+SSL<br>[this implementation]</p>|[Link(to be updated)]()|LSVT+MLT19+ArT+SSL data|-|-|to be updated|[Link]()|
 
 ResNet-series in paper:
 
@@ -67,8 +81,7 @@ ResNet-series in paper:
 |<p>ResNeSt-101+SSL<br>[paper]</p>|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT+SSL data|75.1|86.3|80.3|
 |<p>ResNeXt-151+SSL<br>[paper]</p>|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT+SSL data|74.9|86.0|80.1|
 
-The result of ViTAE is tested in single scale setting without any testing trick. The shorter side is resized to 1185. The submission json file to evaluation website can be downloaded
-here ([Link_to_be_updated]()). 
+The result of ViTAE is tested in single scale setting. The shorter side is resized to 1185.
 
 ## Usage
 
@@ -101,6 +114,7 @@ here ([Link_to_be_updated]()).
     pip install -r requirements/build.txt
     pip install -r requirements/runtime.txt
     pip install -v -e .
+    ```
 
 ### Preparation
 
