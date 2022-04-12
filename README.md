@@ -136,33 +136,38 @@ correspoding datasets in config file from here and put them in [data/](./data):
     |art_noise|[Link]()|[Link]() (pw: )|
     |art_sig|[Link]()|[Link]() (pw: )|
     |lsvt|[Link]()|[Link]() (pw: )|
-    |lsvt_test|[Link]()|[Link]() (pw: )|
+    |lsvt_test|[Link](https://drive.google.com/u/0/uc?id=1iljRxoZ3so9MUyS3rz9Vh2ioRYvaGcko&export=download)|[Link]() (pw: )|
     |icdar2019_mlt|[Link]()|[Link]() (pw: )|
 
     The file structure should look like:
     ```
-    |-- data
-        |-- art
-        |   |-- train_images
-                |-- *.jpg
-        |   |-- test_images
-        |   |-- train.json
-        |   |-- train_lossweight.json
-        |-- art_light
-        |   |-- train_images
-        |   |-- train.json
-        |   |-- train_lossweight.json
+    |- data
+        |- art
+        |   |- train_images
+        |   |    |- *.jpg
+        |   |- test_images
+        |   |    |- *.jpg
+        |   |- train.json
+        |   |- train_lossweight.json
+        |- art_light
+        |   |- train_images
+        |   |    |- *.jpg
+        |   |- train.json
+        |   |- train_lossweight.json
         ......
-        |-- lsvt
-        |   |-- train_images1
-        |   |-- train_images2
-        |   |-- train1.json
-        |   |-- train1_lossweight.json
-        |   |-- train2.json
-        |   |-- train2_lossweight.json
-        |-- lsvt_test
-        |   |-- train_images
-        |   |-- train_lossweight.json
+        |- lsvt
+        |   |- train_images1
+        |   |    |- *.jpg
+        |   |- train_images2
+        |   |    |- *.jpg
+        |   |- train1.json
+        |   |- train1_lossweight.json
+        |   |- train2.json
+        |   |- train2_lossweight.json
+        |- lsvt_test
+        |   |- train_images
+        |   |    |- *.jpg
+        |   |- train_lossweight.json
         ......
 
 ### Training
