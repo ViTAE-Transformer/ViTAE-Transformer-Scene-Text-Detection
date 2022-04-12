@@ -69,7 +69,7 @@ def main(args):
             polygon_list,
             score_list
         )
-        print(f'{img_name}, {count} / {total}')
+        print(f'{img_name}, {count} / {total}', end='\r')
         count += 1
     
     """write json"""
@@ -78,7 +78,6 @@ def main(args):
     total_len = len(txt_list)
     n = 1
     for k in txt_list:
-        print(f'{k}, {n}/{total_len}')
         with open(k, 'r') as f:
             data = f.readlines()
         res_list = []
@@ -104,6 +103,7 @@ def main(args):
             
         key = 'res_'+k.split('/')[-1].split('.')[0].split('_')[-1]
         res_dict[key] = res_list
+        print(f'{k}, {n}/{total_len}', end='\r')
         n += 1
     file = open(args.json_file, "w")
     json.dump(res_dict, file)
