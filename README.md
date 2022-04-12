@@ -52,7 +52,7 @@ backbone ranked the 1st place on the ArT leaderboard.
 
 ## Updates
 
-> ***[2022/04/11]*** Add SSL part for this implementation.
+> ***[2022/04/11]*** Add SSL training code for this implementation.
 >
 >***[2022/04/09]*** The training code for ICDAR2019 ArT dataset is uploaded. Private github repo temporarily.
 
@@ -126,8 +126,7 @@ for backbone initialization. Please put it in [pretrained_model/ViTAE](./pretrai
 
 **Data**
 
-- We use coco format training datasets. Some offline augmented ArT training datasets are used. `lsvt-test` is only used to train SSL model. You can download 
-correspoding datasets in config file from here and put them in [data/](./data):
+- We use coco format training datasets. Some offline augmented ArT training datasets are used. `lsvt-test` is only used to train SSL model. Files named `train_lossweight.json` are the provided pseudo-label for SSL training. You can download correspoding datasets in config file from here and put them in [data/](./data):
 
     |Dataset|<p>Link<br>(Google Drive)</p>|<p>Link<br>(Baidu Wangpan百度网盘)</p>|
     |:------:|:------:|:------:|
