@@ -126,7 +126,7 @@ for backbone initialization. Please put it in [pretrained_model/ViTAE](./pretrai
 
 **Data**
 
-- We use coco format training datasets. Some offline augmented ArT training datasets are used. You can download 
+- We use coco format training datasets. Some offline augmented ArT training datasets are used. `lsvt-test` is only used to train SSL model. You can download 
 correspoding datasets in config file from here and put them in [data/](./data):
 
     |Dataset|<p>Link<br>(Google Drive)</p>|<p>Link<br>(Baidu Wangpan百度网盘)</p>|
@@ -203,7 +203,7 @@ If you are interested in our work, please consider citing the following:
 
 //citation to be updated
 
-For further questions, please contact ##
+Please post issues to let us know if you encounter any problems.
 
 ## Acknowledgement
 
