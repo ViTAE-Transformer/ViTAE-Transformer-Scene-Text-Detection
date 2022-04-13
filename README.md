@@ -51,8 +51,9 @@ backbone ranked the 1st place on the ArT leaderboard.
 ![image](./I3CL.jpg)
 
 ## Updates
-
-> ***[2022/04/11]*** Add SSL training code for this implementation.
+>***[2022/04/13]*** Update all links of training datasets.
+>
+>***[2022/04/11]*** Add SSL training code for this implementation.
 >
 >***[2022/04/09]*** The training code for ICDAR2019 ArT dataset is uploaded. Private github repo temporarily.
 
