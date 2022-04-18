@@ -70,13 +70,13 @@ Evaluation results of I3CL with different backbones on ArT.
 |<p>ViTAE<br>[this repo]</p>|()|LSVT+MLT19+ArT|75.42|82.82|78.95|
 |<p>ResNet-50<br>[paper]</p>|-|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT|71.3|82.7|76.6|
 |<p>ResNet-50<br>[this repo]</p>|()|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT||||
-|<p>ResNet-50+SSL<br>[paper]</p>|-|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT+SSL data|72.2|83.6|77.5|
-|<p>ResNet-50+SSL<br>[this repo]</p>|()|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT||||
+|<p>ResNet-50+SSL<br>[paper]</p>|-|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT+SSL|72.2|83.6|77.5|
+|<p>ResNet-50+SSL<br>[this repo]</p>|()|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT+SSL||||
 |<p>ResNet-50+RegionCL<br>[this repo]</p>|()|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT||||
-|<p>ResNet-50+RegionCL+SSL<br>[this repo]</p>|()|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT||||
-|<p>ResNeXt-101<br>[paper]</p>|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT+SSL data|74.1|85.5|79.4|
-|<p>ResNeSt-101<br>[paper]</p>|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT+SSL data|75.1|86.3|80.3|
-|<p>ResNeXt-151<br>[paper]</p>|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT+SSL data|74.9|86.0|80.1|
+|<p>ResNet-50+RegionCL+SSL<br>[this repo]</p>|()|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT+SSL||||
+|<p>ResNeXt-101<br>[paper]</p>|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT|74.1|85.5|79.4|
+|<p>ResNeSt-101<br>[paper]</p>|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT|75.1|86.3|80.3|
+|<p>ResNeXt-151<br>[paper]</p>|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT|74.9|86.0|80.1|
 
 ## Usage
 
