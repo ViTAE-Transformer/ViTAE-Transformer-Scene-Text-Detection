@@ -5,8 +5,8 @@
 </p>
 
 <p align="center">
-  <a href="#introduction">Introduction</a> |
   <a href="#updates">Updates</a> |
+  <a href="#introduction">Introduction</a> |
   <a href="#results">Results</a> |
   <a href="#usage">Usage</a> |
   <a href="#citation">Citation</a> |
@@ -14,21 +14,18 @@
 </p >
 
 *This is the repo for the paper "I3CL: Intra- and Inter-Instance Collaborative Learning for Arbitrary-shaped Scene Text Detection". 
-Note that I3CL is equiped with the ViTAE(20M params.) backbone in this repo.*
+Note that I3CL is equiped with the ViTAEv2(20M params.) backbone in this repo.*
 
-## Other Links
+***
 
-> **Image Classification**: Please see <a href="https://github.com/ViTAE-Transformer/ViTAE-Transformer/tree/main/Image-Classification">ViTAE-Transformer for image classification</a>;
-
-> **Object Detection**: Please see <a href="https://github.com/ViTAE-Transformer/ViTAE-Transformer/tree/main/Object-Detection">ViTAE-Transformer for object detection</a>;
-
-> **Sementic Segmentation**: Please see <a href="https://github.com/ViTAE-Transformer/ViTAE-Transformer/tree/main/Semantic-Segmentation">ViTAE-Transformer for semantic segmentation</a>;
-
-> **Animal Pose Estimation**: Please see <a href="https://github.com/ViTAE-Transformer/ViTAE-Transformer/tree/main/Animal-Pose-Estimation">ViTAE-Transformer for animal pose estimation</a>;
-
-> **Matting**: Please see <a href="https://github.com/ViTAE-Transformer/ViTAE-Transformer-Matting">ViTAE-Transformer for matting</a>;
-
-> **Remote Sensing**: Please see <a href="https://github.com/ViTAE-Transformer/ViTAE-Transformer-Remote-Sensing">ViTAE-Transformer for Remote Sensing</a>;
+## Updates
+>***[2022/04/13]*** Publish all links of training datasets.
+>
+>***[2022/04/11]*** Add SSL training code for this implementation.
+>
+>***[2022/04/09]*** The training code for ICDAR2019 ArT dataset is uploaded. Private github repo temporarily.
+>
+> Other applications of ViTAE Transformer: [**Image Classification**](https://github.com/ViTAE-Transformer/ViTAE-Transformer/tree/main/Image-Classification) | [**Object Detection**](https://github.com/ViTAE-Transformer/ViTAE-Transformer/tree/main/Object-Detection) | [**Sementic Segmentation**](https://github.com/ViTAE-Transformer/ViTAE-Transformer/tree/main/Semantic-Segmentation) | [**Animal Pose Estimation**](https://github.com/ViTAE-Transformer/ViTAE-Transformer/tree/main/Animal-Pose-Estimation) | [**Matting**](https://github.com/ViTAE-Transformer/ViTAE-Transformer-Matting) | [**Remote Sensing**](https://github.com/ViTAE-Transformer/ViTAE-Transformer-Remote-Sensing)
 
 ## Introduction
 
@@ -50,13 +47,6 @@ backbone ranked the 1st place on the ArT leaderboard.
 
 ![image](./I3CL.jpg)
 
-## Updates
->***[2022/04/13]*** Update all links of training datasets.
->
->***[2022/04/11]*** Add SSL training code for this implementation.
->
->***[2022/04/09]*** The training code for ICDAR2019 ArT dataset is uploaded. Private github repo temporarily.
-
 ## Results
 
 Example results from paper.
@@ -67,16 +57,14 @@ Evaluation results of I3CL with different backbones on ArT.
 
 |Backbone|Model Link|Training Data|Recall|Precision|F-measure|
 |:------:|:------:|:------:|:------:|:------:|:------:|
-|<p>ViTAE<br>[this repo]</p>|()|LSVT+MLT19+ArT|75.42|82.82|78.95|
-|<p>ResNet-50<br>[paper]</p>|-|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT|71.3|82.7|76.6|
-|<p>ResNet-50<br>[this repo]</p>|()|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT||||
-|<p>ResNet-50+SSL<br>[paper]</p>|-|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT+SSL|72.2|83.6|77.5|
-|<p>ResNet-50+SSL<br>[this repo]</p>|()|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT+SSL||||
-|<p>ResNet-50+RegionCL<br>[this repo]</p>|()|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT||||
-|<p>ResNet-50+RegionCL+SSL<br>[this repo]</p>|()|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT+SSL||||
-|<p>ResNeXt-101<br>[paper]</p>|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT|74.1|85.5|79.4|
-|<p>ResNeSt-101<br>[paper]</p>|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT|75.1|86.3|80.3|
-|<p>ResNeXt-151<br>[paper]</p>|SynthText+ReCTS+RCTW+LSVT+MLT19+ArT|74.9|86.0|80.1|
+|<p>ViTAEv2<br>[this repo]</p>|[OneDrive](https://1drv.ms/u/s!AimBgYV7JjTlgRH63hbJjWub5VMv?e=XUOrLb)|[百度网盘]()(pw:)|LSVT,MLT19,ArT|**75.4**|82.8|78.9|
+|<p>ResNet-50<br>[paper]</p>|-|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT|71.3|82.7|76.6|
+|<p>ResNet-50<br>[this repo]</p>|()|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT||||
+|<p>ResNet-50-RegionCL<br>[paper]</p>|-|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT||||
+|<p>ResNet-50-RegionCL<br>[this repo]</p>|()|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT||||
+|<p>ResNeXt-101<br>[paper]</p>|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT|74.1|85.5|79.4|
+|<p>ResNeSt-101<br>[paper]</p>|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT|75.1|**86.3**|**80.3**|
+|<p>ResNeXt-151<br>[paper]</p>|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT|74.9|86.0|80.1|
 
 ## Usage
 
@@ -115,9 +103,9 @@ Evaluation results of I3CL with different backbones on ArT.
 
 **Model:** 
 
-- To train I3CL model yourself, please download the pretrained ViTAE(20M) used in this implementation from here ([Link to be updated]()) 
+- To train I3CL model yourself, please download the pretrained ViTAEv2 used in this implementation from [here]() 
 for backbone initialization. Please put it in [pretrained_model/ViTAE](./pretrained_model/ViTAE).
-- Full I3CL model can be downloaded here ([Link to be updated]()). You can put it in [pretrained_model/I3CL](./pretrained_model/I3CL).
+- Full I3CL model with ViTAE backbone trained on ArT can be downloaded [here](https://1drv.ms/u/s!AimBgYV7JjTlgRH63hbJjWub5VMv?e=XUOrLb). You can put it in [pretrained_model/I3CL](./pretrained_model/I3CL).
 
 **Data**
 
@@ -187,7 +175,7 @@ For example, use our trained I3CL model to get inference results on ICDAR2019 Ar
 txt format records and the json file for testing submission, please run:
 
 ```
-python demo/art_demo.py --checkpoint pretrained_model/I3CL/epoch_12.pth --score-thr 0.45 --json_file art_submission.json
+python demo/art_demo.py --checkpoint pretrained_model/I3CL/vitae_epoch_12.pth --score-thr 0.45 --json_file art_submission.json
 ```
 
 *Note:*
