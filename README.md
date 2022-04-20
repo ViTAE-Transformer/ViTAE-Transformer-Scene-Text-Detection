@@ -59,12 +59,12 @@ Evaluation results of I3CL with different backbones on ArT.
 |:------:|:------:|:------:|:------:|:------:|:------:|
 |<p>ViTAEv2<br>[this repo]</p>|[OneDrive](https://1drv.ms/u/s!AimBgYV7JjTlgRH63hbJjWub5VMv?e=XUOrLb)|[百度网盘]()(pw:)|LSVT,MLT19,ArT|**75.4**|82.8|78.9|
 |<p>ResNet-50<br>[paper]</p>|-|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT|71.3|82.7|76.6|
-|<p>ResNet-50<br>[this repo]</p>|()|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT||||
+|<p>ResNet-50<br>[this repo]</p>|[]()|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT||||
 |<p>ResNet-50-RegionCL<br>[paper]</p>|-|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT||||
-|<p>ResNet-50-RegionCL<br>[this repo]</p>|()|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT||||
-|<p>ResNeXt-101<br>[paper]</p>|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT|74.1|85.5|79.4|
-|<p>ResNeSt-101<br>[paper]</p>|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT|75.1|**86.3**|**80.3**|
-|<p>ResNeXt-151<br>[paper]</p>|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT|74.9|86.0|80.1|
+|<p>ResNet-50-RegionCL<br>[this repo]</p>|[]()|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT||||
+|<p>ResNeXt-101<br>[paper]</p>|-|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT|74.1|85.5|79.4|
+|<p>ResNeSt-101<br>[paper]</p>|-|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT|75.1|**86.3**|**80.3**|
+|<p>ResNeXt-151<br>[paper]</p>|-|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT|74.9|86.0|80.1|
 
 ## Usage
 
