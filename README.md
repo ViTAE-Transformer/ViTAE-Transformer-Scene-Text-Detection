@@ -1,7 +1,7 @@
 <h1 align="center"> I3CL: Intra- and Inter-Instance Collaborative Learning for Arbitrary-shaped Scene Text Detection </h1> 
 
 <p align="center">
-<a href="http://arxiv.org"><img src="https://img.shields.io/badge/arXiv-Paper-<color>"></a>
+<a href="https://arxiv.org/abs/2108.01343"><img src="https://img.shields.io/badge/arXiv-Paper-<color>"></a>
 </p>
 
 <p align="center">
@@ -14,7 +14,7 @@
 </p >
 
 *This is the repo for the paper "I3CL: Intra- and Inter-Instance Collaborative Learning for Arbitrary-shaped Scene Text Detection". 
-Note that I3CL is equiped with the ViTAEv2(20M params.) backbone in this repo.*
+Note that I3CL with ViTAEv2, ResNet50 and ResNet50 w/ RegionCL backbone are included.*
 
 ***
 
@@ -53,15 +53,14 @@ Example results from paper.
 
 ![image](./demo.jpg)
 
-Evaluation results of I3CL with different backbones on ArT.
+Evaluation results of I3CL with different backbones on ArT. Note that I3CL with ViTAE only adopt one step training stage with LSVT+MLT19+ArT training datasets in this repo. I3CL with ResNet series adopt three stage training strategy, i.e, pre-train on SynthText, mix-train on ReCTS+RCTW+LSVT+MLT19+ArT and lastly finetune on LSVT+MLT19+ArT.
 
 |Backbone|Model Link|Training Data|Recall|Precision|F-measure|
 |:------:|:------:|:------:|:------:|:------:|:------:|
-|<p>ViTAEv2<br>[this repo]</p>|<p>[OneDrive](https://1drv.ms/u/s!AimBgYV7JjTlgRH63hbJjWub5VMv?e=XUOrLb)<br>[百度网盘]()(pw:)</p>|LSVT,MLT19,ArT|**75.4**|82.8|78.9|
+|<p>ViTAEv2<br>[this repo]</p>|<p>[OneDrive](https://1drv.ms/u/s!AimBgYV7JjTlgRH63hbJjWub5VMv?e=XUOrLb)/<br>[百度网盘](pw:)</p>|LSVT,MLT19,ArT|**75.4**|82.8|78.9|
 |<p>ResNet-50<br>[paper]</p>|-|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT|71.3|82.7|76.6|
-|<p>ResNet-50<br>[this repo]</p>|[]()|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT||||
-|<p>ResNet-50-RegionCL<br>[paper]</p>|-|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT||||
-|<p>ResNet-50-RegionCL<br>[this repo]</p>|[]()|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT||||
+|<p>ResNet-50 w/ RegionCL(finetuning)<br>[paper]</p>|-|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT|72.6|81.9|77.0|
+|<p>ResNet-50 w/ RegionCL(w/o finetuning)<br>[this repo]</p>|[]()|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT|73.5|81.6|77.3|
 |<p>ResNeXt-101<br>[paper]</p>|-|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT|74.1|85.5|79.4|
 |<p>ResNeSt-101<br>[paper]</p>|-|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT|75.1|**86.3**|**80.3**|
 |<p>ResNeXt-151<br>[paper]</p>|-|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT|74.9|86.0|80.1|
@@ -89,7 +88,7 @@ Evaluation results of I3CL with different backbones on ArT.
     pip install timm
     ```
 
-4. Clone this repository and them install it:
+4. Clone this repository and then install it:
     
     ```
     git clone https://github.com/ViTAE-Transformer/ViTAE-Transformer-Scene-Text-Detection.git
@@ -103,9 +102,8 @@ Evaluation results of I3CL with different backbones on ArT.
 
 **Model:** 
 
-- To train I3CL model yourself, please download the pretrained ViTAEv2 used in this implementation from [here](https://1drv.ms/u/s!AimBgYV7JjTlgRKwMDLQQ7QzPOJs?e=mzeeO4) 
-for backbone initialization. Please put it in [pretrained_model/ViTAE](./pretrained_model/ViTAE).
-- Full I3CL model with ViTAE backbone trained on ArT can be downloaded [here](https://1drv.ms/u/s!AimBgYV7JjTlgRH63hbJjWub5VMv?e=XUOrLb). You can put it in [pretrained_model/I3CL](./pretrained_model/I3CL).
+- To train I3CL model yourself, please download the pretrained ViTAEv2 used in this implementation from here: [OneDrive](https://1drv.ms/u/s!AimBgYV7JjTlgRKwMDLQQ7QzPOJs?e=mzeeO4) | [百度网盘]. ResNet-50 w/ RegionCL(finetuning): [OneDrive] | [百度网盘]. ResNet-50 w/ RegionCL(w/o finetuning): [OneDrive] | [百度网盘]. For backbone initialization, please put them in [pretrained_model/ViTAE](./pretrained_model/ViTAE) or [pretrained_model/RegionCL](./pretrained_model/RegionCL).
+- Full I3CL model with ViTAE backbone trained on ArT can be downloaded and put in [pretrained_model/I3CL](./pretrained_model/I3CL).
 
 **Data**
 
@@ -120,6 +118,8 @@ for backbone initialization. Please put it in [pretrained_model/ViTAE](./pretrai
     |lsvt|[Link](https://1drv.ms/u/s!AimBgYV7JjTlae-oSHbbwqD-H8o?e=EjB9d5)|[Link](https://pan.baidu.com/s/1UTdD8fcdyXXdQMzfMBbHoQ) (pw:wly0)|
     |lsvt_test|[Link](https://1drv.ms/u/s!AimBgYV7JjTldfOea-7Wcc_uVSE?e=I1IgvU)|[Link](https://pan.baidu.com/s/14y3W0XRCuqDboSXMlXTtJw) (pw:8ha3)|
     |icdar2019_mlt|[Link](https://1drv.ms/u/s!AimBgYV7JjTlbtKKo7-IFG32Yo4?e=XprWJb)|[Link](https://pan.baidu.com/s/1vHN6i4iTtUsDMa6eR7Py0Q) (pw:hmnj)|
+    |rctw|[Link]|[Link] (pw:)|
+    |rects|[Link]|[Link] (pw:)|
 
     The file structure should look like:
     ```
@@ -154,18 +154,37 @@ for backbone initialization. Please put it in [pretrained_model/ViTAE](./pretrai
 
 ### Training
 
-Distributed training with 4GPUs:
+- Distributed training with 4GPUs for **ViTAE** backbone:
 ```
 python -m torch.distributed.launch --nproc_per_node=4 --master_port=29500 tools/train.py \
-configs/i3cl_vitae_fpn_ms_train.py --launcher pytorch --work-dir ./out_dir/${your_dir}
+configs/i3cl_vitae_fpn/i3cl_vitae_fpn_ms_train.py --launcher pytorch --work-dir ./out_dir/${your_dir}
 ```
+
+- Distributed training with 4GPUs for **ResNet50** backbone:
+
+```
+(1) python -m torch.distributed.launch --nproc_per_node=4 --master_port=29500 tools/train.py \
+configs/i3cl_r50_fpn/i3cl_r50_fpn_ms_pretrain.py --launcher pytorch --work-dir ./out_dir/art_r50_pretrain/
+(2) python -m torch.distributed.launch --nproc_per_node=4 --master_port=29500 tools/train.py \
+configs/i3cl_r50_fpn/i3cl_r50_fpn_ms_mixtrain.py --launcher pytorch --work-dir ./out_dir/art_r50_mixtrain/
+(3) python -m torch.distributed.launch --nproc_per_node=4 --master_port=29500 tools/train.py \
+configs/i3cl_r50_fpn/i3cl_r50_fpn_ms_finetune.py --launcher pytorch --work-dir ./out_dir/art_r50_finetune/
+```
+
+- Distributed training with 4GPUs for **ResNet50 w/ RegionCL** backbone:
+
+```
+(1) python -m torch.distributed.launch --nproc_per_node=4 --master_port=29500 tools/train.py \
+configs/i3cl_r50_regioncl_fpn/i3cl_r50_fpn_ms_pretrain.py --launcher pytorch --work-dir ./out_dir/art_r50_regioncl_pretrain/
+(2) python -m torch.distributed.launch --nproc_per_node=4 --master_port=29500 tools/train.py \
+configs/i3cl_r50_regioncl_fpn/i3cl_r50_fpn_ms_mixtrain.py --launcher pytorch --work-dir ./out_dir/art_r50_regioncl_mixtrain/
+(3) python -m torch.distributed.launch --nproc_per_node=4 --master_port=29500 tools/train.py \
+configs/i3cl_r50_regioncl_fpn/i3cl_r50_fpn_ms_finetune.py --launcher pytorch --work-dir ./out_dir/art_r50_regioncl_finetune/
+```
+
 *Note:*
 
-- *If you want to train the model with SSL, please: (1) set `with_ssl=True` in [configuration file(line9)](./configs/i3cl_vitae_fpn/coco_instance.py). 
-(2) use the provided SSL data below annotation in [configuration file(line107)](./configs/i3cl_vitae_fpn/coco_instance.py), such as `art_lossweight` in 
-`*_lossweight` format. Or you can generate data yourself according to the Pseudo-label Generation algorithm in paper.*
-
-- *Due to Transformer-based backbone, if the GPU memory is limited, please adjust `img_scale` in 
+- *If the GPU memory is limited during training I3CL ViTAE backbone, please adjust `img_scale` in 
 [configuration file](./configs/i3cl_vitae_fpn/coco_instance.py). The maximum scale set to (800, 1333) is proper for V100(16G) while 
 there is little effect on the performance actually. Please change the training scale according to your condition.*
 
@@ -186,9 +205,7 @@ python demo/art_demo.py --checkpoint pretrained_model/I3CL/vitae_epoch_12.pth --
 
 This project is for research purpose only.
 
-If you are interested in our work, please consider citing the following:
-
-//citation to be updated
+If you are interested in our work, please consider citing our work.
 
 Please post issues to let us know if you encounter any problems.
 
