@@ -19,7 +19,7 @@ Note that I3CL is equiped with the ViTAEv2(20M params.) backbone in this repo.*
 ***
 
 ## Updates
->***[2022/04/13]*** Publish all links of training datasets.
+>***[2022/04/13]*** Publish links of training datasets.
 >
 >***[2022/04/11]*** Add SSL training code for this implementation.
 >
