@@ -118,7 +118,7 @@ Evaluation results of I3CL with different backbones on ArT. *Note that I3CL with
     |lsvt|[Link](https://1drv.ms/u/s!AimBgYV7JjTlae-oSHbbwqD-H8o?e=EjB9d5)|[Link](https://pan.baidu.com/s/1UTdD8fcdyXXdQMzfMBbHoQ) (pw:wly0)|
     |lsvt_test|[Link](https://1drv.ms/u/s!AimBgYV7JjTldfOea-7Wcc_uVSE?e=I1IgvU)|[Link](https://pan.baidu.com/s/14y3W0XRCuqDboSXMlXTtJw) (pw:8ha3)|
     |icdar2019_mlt|[Link](https://1drv.ms/u/s!AimBgYV7JjTlbtKKo7-IFG32Yo4?e=XprWJb)|[Link](https://pan.baidu.com/s/1vHN6i4iTtUsDMa6eR7Py0Q) (pw:hmnj)|
-    |rctw|[Link]|[Link] (pw:)|
+    |rctw|[Link](https://1drv.ms/u/s!AimBgYV7JjTlgRawI3dSiEOhp6Is?e=D7MktG)|[Link] (pw:)|
     |rects|[Link](https://1drv.ms/u/s!AimBgYV7JjTlgRWNyPwC5a04c-vX?e=hKK4az)|[Link] (pw:)|
 
     The file structure should look like:
