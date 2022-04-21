@@ -36,7 +36,7 @@ optimizer = dict(_delete_=True, type='AdamW', lr=0.0001, betas=(0.9, 0.999), wei
                                                  'relative_position_bias_table': dict(decay_mult=0.),
                                                  'norm': dict(decay_mult=0.)}))
 
-lr_config = dict(policy='step', warmup='linear', warmup_iters=1000, warmup_ratio=0.01, step=[8])
+lr_config = dict(policy='step', warmup='linear', warmup_iters=1000, warmup_ratio=0.001, step=[8])
 runner = dict(type='EpochBasedRunner', max_epochs=12)
 find_unused_parameters=True
 

@@ -100,6 +100,7 @@ class InterCLBlock(nn.Module):
             roi_length_list = [roi_features.shape[0]] # for inference with 1 batch size
             if bs > 1:
                 raise NotImplementedError("Inference for 1 batch size now")
+
         assert feature_map[0].shape[0] == len(roi_length_list)
 
         global_context = self.global_context_extract_module(feature_map)

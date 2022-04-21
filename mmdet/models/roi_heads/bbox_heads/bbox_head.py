@@ -169,7 +169,7 @@ class BBoxHead(BaseModule):
         if num_pos > 0:
             labels[:num_pos] = pos_gt_labels
             pos_weight = 1.0 if cfg.pos_weight <= 0 else cfg.pos_weight
-            if gt_lossweight is not None:
+            if gt_lossweight is not None:  # ymy
                 pos_weight = gt_lossweight[:num_pos]
             label_weights[:num_pos] = pos_weight
             if not self.reg_decoded_bbox:
@@ -182,7 +182,7 @@ class BBoxHead(BaseModule):
                 # absolute coordinate format.
                 pos_bbox_targets = pos_gt_bboxes
             bbox_targets[:num_pos, :] = pos_bbox_targets
-            bbox_weights[:num_pos, :] = gt_lossweight[:num_pos].view(-1, 1) if gt_lossweight is not None else 1.0
+            bbox_weights[:num_pos, :] = gt_lossweight[:num_pos].view(-1, 1) if gt_lossweight is not None else 1.0  # ymy
         if num_neg > 0:
             label_weights[-num_neg:] = 1.0
 
@@ -241,6 +241,7 @@ class BBoxHead(BaseModule):
         neg_bboxes_list = [res.neg_bboxes for res in sampling_results]
         pos_gt_bboxes_list = [res.pos_gt_bboxes for res in sampling_results]
         pos_gt_labels_list = [res.pos_gt_labels for res in sampling_results]
+        # ymy
         gt_lossweight_list = [gt_lossweight[idx][res.pos_assigned_gt_inds] if gt_lossweight is not None else None
                               for idx, res in enumerate(sampling_results)]
 
@@ -250,7 +251,7 @@ class BBoxHead(BaseModule):
             neg_bboxes_list,
             pos_gt_bboxes_list,
             pos_gt_labels_list,
-            gt_lossweight_list,
+            gt_lossweight_list,  #ymy
             cfg=rcnn_train_cfg)
 
         if concat:

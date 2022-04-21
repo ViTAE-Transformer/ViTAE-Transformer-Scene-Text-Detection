@@ -259,7 +259,7 @@ class AnchorHead(BaseDenseHead, BBoxTestMixin):
                                   dtype=torch.long)
         label_weights = anchors.new_zeros(num_valid_anchors, dtype=torch.float)
 
-        if gt_lossweight is not None:
+        if gt_lossweight is not None:  # ymy
             sampling_gt_loss_weight = gt_lossweight[sampling_result.pos_assigned_gt_inds]
 
         pos_inds = sampling_result.pos_inds
@@ -271,7 +271,7 @@ class AnchorHead(BaseDenseHead, BBoxTestMixin):
             else:
                 pos_bbox_targets = sampling_result.pos_gt_bboxes
             bbox_targets[pos_inds, :] = pos_bbox_targets
-            bbox_weights[pos_inds, :] = sampling_gt_loss_weight.view(-1, 1) if gt_lossweight is not None else 1.0
+            bbox_weights[pos_inds, :] = sampling_gt_loss_weight.view(-1, 1) if gt_lossweight is not None else 1.0  # ymy
 
             if gt_labels is None:
                 # Only rpn gives gt_labels as None
@@ -282,7 +282,7 @@ class AnchorHead(BaseDenseHead, BBoxTestMixin):
                     sampling_result.pos_assigned_gt_inds]
 
             if self.train_cfg.pos_weight <= 0:
-                label_weights[pos_inds] = sampling_gt_loss_weight if gt_lossweight is not None else 1.0
+                label_weights[pos_inds] = sampling_gt_loss_weight if gt_lossweight is not None else 1.0  # ymy
             else:
                 label_weights[pos_inds] = self.train_cfg.pos_weight  # if use SSL, please change this code
 
@@ -503,7 +503,7 @@ class AnchorHead(BaseDenseHead, BBoxTestMixin):
             valid_flag_list,
             gt_bboxes,
             img_metas,
-            gt_lossweight,
+            gt_lossweight,  # ymy
             gt_bboxes_ignore_list=gt_bboxes_ignore,
             gt_labels_list=gt_labels,
             label_channels=label_channels)

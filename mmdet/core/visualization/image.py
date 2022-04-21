@@ -6,6 +6,7 @@ import pycocotools.mask as mask_util
 from matplotlib.collections import PatchCollection
 from matplotlib.patches import Polygon
 import cv2
+import random
 
 from ..utils import mask2ndarray
 
@@ -98,7 +99,7 @@ def imshow_det_bboxes(img,
             # See: https://github.com/open-mmlab/mmdetection/issues/5844
             state = np.random.get_state()
             # random color
-            np.random.seed(42)
+            #np.random.seed()
             mask_colors = [
                 np.random.randint(0, 256, (1, 3), dtype=np.uint8)
                 for _ in range(max(labels) + 1)
@@ -135,6 +136,7 @@ def imshow_det_bboxes(img,
     color = []
     demo_polygon_list = []  # ymy
     demo_score_list = []
+    random_color = [(0,255,0),(255,0,0),(0,0,255),(0,255,255),(255,0,255),(255,255,0)]
     for i, (bbox, label) in enumerate(zip(bboxes, labels)):
         bbox_int = bbox.astype(np.int32)
         poly = [[bbox_int[0], bbox_int[1]], [bbox_int[0], bbox_int[3]],
@@ -161,7 +163,8 @@ def imshow_det_bboxes(img,
         #   verticalalignment='top',
         #   horizontalalignment='left')
         if segms is not None:
-            color_mask = mask_colors[labels[i]]
+            #color_mask = mask_colors[labels[i]]
+            color_mask = np.array(random.choice(random_color), dtype=np.uint8)
             mask = segms[i].astype(bool)
             img[mask] = img[mask] * 0.5 + color_mask * 0.5
             

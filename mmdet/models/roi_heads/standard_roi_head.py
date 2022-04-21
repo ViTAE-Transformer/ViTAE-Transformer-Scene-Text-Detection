@@ -35,8 +35,8 @@ class StandardRoIHead(BaseRoIHead, BBoxTestMixin, MaskTestMixin):
             self.share_roi_extractor = True
             self.mask_roi_extractor = self.bbox_roi_extractor
         self.mask_head = build_head(mask_head)
-        # YeJ
-        self.inter_cl_module = InterCLBlock()
+        if self.intercl_on:
+            self.inter_cl_module = InterCLBlock()
 
     def forward_dummy(self, x, proposals):
         """Dummy forward function."""
@@ -85,7 +85,7 @@ class StandardRoIHead(BaseRoIHead, BBoxTestMixin, MaskTestMixin):
             dict[str, Tensor]: a dictionary of loss components
         """
         # assign gts and sample proposals
-        gt_lossweight = kwargs.get('gt_lossweight', None)
+        gt_lossweight = kwargs.get('gt_lossweight', None)  # ymy
 
         if self.with_bbox or self.with_mask:
             num_imgs = len(img_metas)
@@ -201,7 +201,8 @@ class StandardRoIHead(BaseRoIHead, BBoxTestMixin, MaskTestMixin):
 
             if length_list is not None:
                 assert sum(length_list) == mask_feats.shape[0]
-            mask_feats = self.inter_cl_module([x[0],x[1],x[2],x[3]], mask_feats, length_list)
+            if self.intercl_on:
+                mask_feats = self.inter_cl_module([x[0],x[1],x[2],x[3]], mask_feats, length_list)
 
             if self.with_shared_head:
                 mask_feats = self.shared_head(mask_feats)

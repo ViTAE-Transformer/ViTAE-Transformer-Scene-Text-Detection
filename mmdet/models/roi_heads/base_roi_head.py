@@ -18,10 +18,12 @@ class BaseRoIHead(BaseModule, metaclass=ABCMeta):
                  train_cfg=None,
                  test_cfg=None,
                  pretrained=None,
-                 init_cfg=None):
+                 init_cfg=None, 
+                 intercl_on=False):
         super(BaseRoIHead, self).__init__(init_cfg)
         self.train_cfg = train_cfg
         self.test_cfg = test_cfg
+        self.intercl_on = intercl_on
         if shared_head is not None:
             shared_head.pretrained = pretrained
             self.shared_head = build_shared_head(shared_head)

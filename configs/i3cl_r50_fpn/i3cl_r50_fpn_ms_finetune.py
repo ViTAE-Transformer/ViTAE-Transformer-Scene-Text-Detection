@@ -1,3 +1,7 @@
+_base_ = [
+    './i3cl_r50_fpn_model.py',
+    './default_runtime.py'
+]
 # dataset settings
 dataset_type = 'CocoDataset'
 data_root = 'data/'
@@ -6,24 +10,20 @@ img_norm_cfg = dict(
 
 train_pipeline = [
     dict(type='LoadImageFromFile'),
-    dict(type='LoadAnnotations', with_bbox=True, with_mask=True),
+    dict(type='LoadAnnotations', with_bbox=True, with_mask=True, with_ssl=False),
     dict(type='RandomFlip', flip_ratio=[0.5, 0.5], direction=['horizontal', 'vertical']),
     dict(type='AutoAugment',
              policies=[
                  [
                      dict(type='Rotate', prob=0.5, level=10, max_rotate_angle=10),
-                     dict(type='Resize',img_scale=[(480,1333),(512,1333),(544,1333),(576,1333),(608,1333),
-                                                   (640,1333),(704,1333),(732,1333),(768,1333),(800,1600),
-                                                   (832,1600),(864,1600),(896,1600)],
+                     dict(type='Resize',img_scale=[(800,1800),(1000,1800),(1200,1800),(1400,1800),(1600,1800)],
                           multiscale_mode='value', keep_ratio=True)
                  ],
                  [
                      dict(type='ColorTransform', prob=0.5, level=8),
                      dict(type='BrightnessTransform', prob=0.5, level=8),
                      dict(type='ContrastTransform', prob=0.5, level=8),
-                     dict(type='Resize',img_scale=[(480,1333),(512,1333),(544,1333),(576,1333),(608,1333),
-                                                   (640,1333),(704,1333),(732,1333),(768,1333),(800,1600),
-                                                   (832,1600),(864,1600),(896,1600)],
+                     dict(type='Resize',img_scale=[(800,1800),(1000,1800),(1200,1800),(1400,1800),(1600,1800)],
                           multiscale_mode='value', keep_ratio=True)
                  ],
                  [
@@ -31,9 +31,7 @@ train_pipeline = [
                      dict(type='BrightnessTransform', prob=0.5, level=8),
                      dict(type='ContrastTransform', prob=0.5, level=8),
                      dict(type='Rotate', prob=0.5, level=10, max_rotate_angle=15),
-                     dict(type='Resize',img_scale=[(480,1333),(512,1333),(544,1333),(576,1333),(608,1333),
-                                                   (640,1333),(704,1333),(732,1333),(768,1333),(800,1600),
-                                                   (832,1600),(864,1600),(896,1600)],
+                     dict(type='Resize',img_scale=[(800,1800),(1000,1800),(1200,1800),(1400,1800),(1600,1800)],
                           multiscale_mode='value', keep_ratio=True)
                  ]
              ]),
@@ -111,43 +109,6 @@ ic19mlt_2=dict(
         ann_file=data_root + 'icdar2019_mlt/train2.json',
         img_prefix=data_root + 'icdar2019_mlt/train_images2/',
         pipeline=train_pipeline)
-rctw=dict(
-        type=dataset_type,
-        classes=classes,
-        ann_file=data_root + 'rctw/train.json',
-        img_prefix=data_root + 'rctw/train_images/',
-        pipeline=train_pipeline)
-rects=dict(
-        type=dataset_type,
-        classes=classes,
-        ann_file=data_root + 'rects/train.json',
-        img_prefix=data_root + 'rects/train_images/',
-        pipeline=train_pipeline)
-synthtext_1=dict(
-        type=dataset_type,
-        classes=classes,
-        ann_file=data_root + 'syntext1/train.json',
-        img_prefix=data_root + 'syntext1/train_images/',
-        pipeline=train_pipeline)
-synthtext_2=dict(
-        type=dataset_type,
-        classes=classes,
-        ann_file=data_root + 'syntext2/train.json',
-        img_prefix=data_root + 'syntext2/train_images/',
-        pipeline=train_pipeline)
-# CTW1500 & TotalText
-ctw1500=dict(
-        type=dataset_type,
-        classes=classes,
-        ann_file=data_root + 'ctw1500/train.json',
-        img_prefix=data_root + 'ctw1500/train_images/',
-        pipeline=train_pipeline)
-tt=dict(
-        type=dataset_type,
-        classes=classes,
-        ann_file=data_root + 'tt/train.json',
-        img_prefix=data_root + 'tt/train_images/',
-        pipeline=train_pipeline)
 
 data = dict(
     samples_per_gpu=1,
@@ -164,3 +125,19 @@ data = dict(
         pipeline=test_pipeline))
 
 evaluation = dict(metric=['bbox', 'segm'])
+
+# optimizer
+optimizer = dict(type='SGD', lr=0.0005, momentum=0.9, weight_decay=0.0001)
+optimizer_config = dict(grad_clip=None)
+# learning policy
+lr_config = dict(
+    policy='step',
+    warmup='linear',
+    warmup_iters=1000,
+    warmup_ratio=0.001,
+    step=[4, 6])
+runner = dict(type='EpochBasedRunner', max_epochs=8)
+find_unused_parameters=True
+
+# resume_from = '...'
+load_from = './out_dir/art_r50_mixtrain/epoch_10.pth'

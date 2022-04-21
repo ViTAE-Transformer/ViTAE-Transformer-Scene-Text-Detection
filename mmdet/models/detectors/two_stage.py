@@ -24,7 +24,8 @@ class TwoStageDetector(BaseDetector):
                  train_cfg=None,
                  test_cfg=None,
                  pretrained=None,
-                 init_cfg=None):
+                 init_cfg=None, 
+                 intracl_on=False):
         super(TwoStageDetector, self).__init__(init_cfg)
         if pretrained:
             warnings.warn('DeprecationWarning: pretrained is deprecated, '
@@ -52,7 +53,9 @@ class TwoStageDetector(BaseDetector):
 
         self.train_cfg = train_cfg
         self.test_cfg = test_cfg
-        self.intra_cl_module = build_intraclblock_list(num_block=5)
+        self.intracl_on = intracl_on
+        if self.intracl_on:
+            self.intra_cl_module = build_intraclblock_list(num_block=5)
 
     @property
     def with_rpn(self):
@@ -129,13 +132,13 @@ class TwoStageDetector(BaseDetector):
         #with torch.no_grad():
         x = self.extract_feat(img)
 
-        # YeJ
-        x0 = self.intra_cl_module[0](x[0])
-        x1 = self.intra_cl_module[1](x[1])
-        x2 = self.intra_cl_module[2](x[2])
-        x3 = self.intra_cl_module[3](x[3])
-        x4 = self.intra_cl_module[4](x[4])
-        x_intracl = (x0,x1,x2,x3,x4)
+        if self.intracl_on:
+            x0 = self.intra_cl_module[0](x[0])
+            x1 = self.intra_cl_module[1](x[1])
+            x2 = self.intra_cl_module[2](x[2])
+            x3 = self.intra_cl_module[3](x[3])
+            x4 = self.intra_cl_module[4](x[4])
+            x = (x0,x1,x2,x3,x4)
 
         losses = dict()
 
@@ -144,7 +147,7 @@ class TwoStageDetector(BaseDetector):
             proposal_cfg = self.train_cfg.get('rpn_proposal',
                                               self.test_cfg.rpn)
             rpn_losses, proposal_list = self.rpn_head.forward_train(
-                x_intracl,
+                x,
                 img_metas,
                 gt_bboxes,
                 gt_labels=None,
@@ -155,7 +158,7 @@ class TwoStageDetector(BaseDetector):
         else:
             proposal_list = proposals
 
-        roi_losses = self.roi_head.forward_train(x_intracl, img_metas, proposal_list,
+        roi_losses = self.roi_head.forward_train(x, img_metas, proposal_list,
                                                  gt_bboxes, gt_labels,
                                                  gt_bboxes_ignore, gt_masks,
                                                  **kwargs)
@@ -172,22 +175,22 @@ class TwoStageDetector(BaseDetector):
         assert self.with_bbox, 'Bbox head must be implemented.'
         x = self.extract_feat(img)
 
-        # YeJ
-        x0 = self.intra_cl_module[0](x[0])
-        x1 = self.intra_cl_module[1](x[1])
-        x2 = self.intra_cl_module[2](x[2])
-        x3 = self.intra_cl_module[3](x[3])
-        x4 = self.intra_cl_module[4](x[4])
-        x_intracl = (x0,x1,x2,x3,x4)
+        if self.intracl_on:
+            x0 = self.intra_cl_module[0](x[0])
+            x1 = self.intra_cl_module[1](x[1])
+            x2 = self.intra_cl_module[2](x[2])
+            x3 = self.intra_cl_module[3](x[3])
+            x4 = self.intra_cl_module[4](x[4])
+            x = (x0,x1,x2,x3,x4)
 
         if proposals is None:
             proposal_list = await self.rpn_head.async_simple_test_rpn(
-                x_intracl, img_meta)
+                x, img_meta)
         else:
             proposal_list = proposals
 
         return await self.roi_head.async_simple_test(
-            x_intracl, proposal_list, img_meta, rescale=rescale)
+            x, proposal_list, img_meta, rescale=rescale)
 
     def simple_test(self, img, img_metas, proposals=None, rescale=False):
         """Test without augmentation."""
@@ -195,21 +198,21 @@ class TwoStageDetector(BaseDetector):
         assert self.with_bbox, 'Bbox head must be implemented.'
         x = self.extract_feat(img)
 
-        # YeJ
-        x0 = self.intra_cl_module[0](x[0])
-        x1 = self.intra_cl_module[1](x[1])
-        x2 = self.intra_cl_module[2](x[2])
-        x3 = self.intra_cl_module[3](x[3])
-        x4 = self.intra_cl_module[4](x[4])
-        x_intracl = (x0,x1,x2,x3,x4)
+        if self.intracl_on:
+            x0 = self.intra_cl_module[0](x[0])
+            x1 = self.intra_cl_module[1](x[1])
+            x2 = self.intra_cl_module[2](x[2])
+            x3 = self.intra_cl_module[3](x[3])
+            x4 = self.intra_cl_module[4](x[4])
+            x = (x0,x1,x2,x3,x4)
 
         if proposals is None:
-            proposal_list = self.rpn_head.simple_test_rpn(x_intracl, img_metas)
+            proposal_list = self.rpn_head.simple_test_rpn(x, img_metas)
         else:
             proposal_list = proposals
 
         return self.roi_head.simple_test(
-            x_intracl, proposal_list, img_metas, rescale=rescale)
+            x, proposal_list, img_metas, rescale=rescale)
 
     def aug_test(self, imgs, img_metas, rescale=False):
         """Test with augmentations.
@@ -219,17 +222,17 @@ class TwoStageDetector(BaseDetector):
         """
         x = self.extract_feats(imgs)
 
-        # YeJ
-        x0 = self.intra_cl_module[0](x[0])
-        x1 = self.intra_cl_module[1](x[1])
-        x2 = self.intra_cl_module[2](x[2])
-        x3 = self.intra_cl_module[3](x[3])
-        x4 = self.intra_cl_module[4](x[4])
-        x_intracl = (x0,x1,x2,x3,x4)
+        if self.intracl_on:
+            x0 = self.intra_cl_module[0](x[0])
+            x1 = self.intra_cl_module[1](x[1])
+            x2 = self.intra_cl_module[2](x[2])
+            x3 = self.intra_cl_module[3](x[3])
+            x4 = self.intra_cl_module[4](x[4])
+            x = (x0,x1,x2,x3,x4)
 
-        proposal_list = self.rpn_head.aug_test_rpn(x_intracl, img_metas)
+        proposal_list = self.rpn_head.aug_test_rpn(x, img_metas)
         return self.roi_head.aug_test(
-            x_intracl, proposal_list, img_metas, rescale=rescale)
+            x, proposal_list, img_metas, rescale=rescale)
 
     def onnx_export(self, img, img_metas):
 

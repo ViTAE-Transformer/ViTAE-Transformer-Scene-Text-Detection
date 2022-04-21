@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="328542f3-f424-4148-9015-709726d88067" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/configs/i3cl_vitae_fpn/coco_instance.py" beforeDir="false" afterPath="$PROJECT_DIR$/configs/i3cl_vitae_fpn/coco_instance.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/i3cl_vitae_fpn/i3cl_vitae_fpn_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/configs/i3cl_vitae_fpn/i3cl_vitae_fpn_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/i3cl_vitae_fpn/i3cl_vitae_fpn_ms_train.py" beforeDir="false" afterPath="$PROJECT_DIR$/configs/i3cl_vitae_fpn/i3cl_vitae_fpn_ms_train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmdet/core/visualization/image.py" beforeDir="false" afterPath="$PROJECT_DIR$/mmdet/core/visualization/image.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmdet/datasets/pipelines/formating.py" beforeDir="false" afterPath="$PROJECT_DIR$/mmdet/datasets/pipelines/formating.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmdet/datasets/pipelines/loading.py" beforeDir="false" afterPath="$PROJECT_DIR$/mmdet/datasets/pipelines/loading.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmdet/models/dense_heads/anchor_head.py" beforeDir="false" afterPath="$PROJECT_DIR$/mmdet/models/dense_heads/anchor_head.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmdet/models/dense_heads/base_dense_head.py" beforeDir="false" afterPath="$PROJECT_DIR$/mmdet/models/dense_heads/base_dense_head.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmdet/models/detectors/mask_rcnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/mmdet/models/detectors/mask_rcnn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmdet/models/detectors/two_stage.py" beforeDir="false" afterPath="$PROJECT_DIR$/mmdet/models/detectors/two_stage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmdet/models/roi_heads/base_roi_head.py" beforeDir="false" afterPath="$PROJECT_DIR$/mmdet/models/roi_heads/base_roi_head.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmdet/models/roi_heads/bbox_heads/bbox_head.py" beforeDir="false" afterPath="$PROJECT_DIR$/mmdet/models/roi_heads/bbox_heads/bbox_head.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmdet/models/roi_heads/inter_cl_module.py" beforeDir="false" afterPath="$PROJECT_DIR$/mmdet/models/roi_heads/inter_cl_module.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmdet/models/roi_heads/standard_roi_head.py" beforeDir="false" afterPath="$PROJECT_DIR$/mmdet/models/roi_heads/standard_roi_head.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pretrained_model/I3CL/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/pretrained_model/I3CL/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pretrained_model/ViTAE/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/pretrained_model/ViTAE/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="27gk6EpCr8RvDqwW6ylBT8zPVDc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager" selected="Python.debug (1)">
+    <configuration name="debug (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ViTAE-Transformer-Scene-Text-Detection" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/debug.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="debug" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ViTAE-Transformer-Scene-Text-Detection" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/configs" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/configs/debug.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="train" type="PythonConfigurationType" factoryName="Python">
+      <module name="ViTAE-Transformer-Scene-Text-Detection" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="sftp://wangbo2@gpugrid:22/dat01/wangbo2/anaconda3/envs/open-mmlab/bin/python3.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <PathMappingSettings>
+        <option name="pathMappings">
+          <list>
+            <mapping local-root="$PROJECT_DIR$" remote-root="/scratch/wangbo2/ymy/ViTAE-Transformer-Scene-Text-Detection" />
+          </list>
+        </option>
+      </PathMappingSettings>
+      <option name="SCRIPT_NAME" value="torch.distributed.launch" />
+      <option name="PARAMETERS" value="--nproc_per_node=1 --master_port=29500 tools/train.py configs/i3cl_vitae_fpn/i3cl_vitae_fpn_ms_train.py --launcher pytorch --seed 42 --work-dir ./out_dir/test/" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="true" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.train" />
+      <item itemvalue="Python.debug" />
+      <item itemvalue="Python.debug (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.debug (1)" />
+        <item itemvalue="Python.debug" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="328542f3-f424-4148-9015-709726d88067" name="Default Changelist" comment="" />
+      <created>1649748938642</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1649748938642</updated>
+      <workItem from="1649748943631" duration="238000" />
+      <workItem from="1649909735164" duration="7137000" />
+      <workItem from="1650246731422" duration="23000" />
+      <workItem from="1650265986045" duration="14230000" />
+      <workItem from="1650334908734" duration="3848000" />
+      <workItem from="1650338825940" duration="23000" />
+      <workItem from="1650359741247" duration="12993000" />
+      <workItem from="1650384577485" duration="25000" />
+      <workItem from="1650385364431" duration="2035000" />
+      <workItem from="1650419940808" duration="2827000" />
+      <workItem from="1650438580735" duration="10475000" />
+      <workItem from="1650522833482" duration="854000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="174" width="1206" height="683" key="#Deployment" timestamp="1650335115052">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="552" y="174" width="1206" height="683" key="#Deployment/0.0.1920.1032@0.0.1920.1032" timestamp="1650335115052" />
+    <state x="414" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1650450800021">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="414" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1650450800021" />
+    <state x="572" y="318" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1650452462307">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="572" y="318" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1032@0.0.1920.1032" timestamp="1650452462307" />
+    <state x="740" y="271" key="FileChooserDialogImpl" timestamp="1650419988591">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="592" y="214" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1650384601317" />
+    <state x="740" y="271" key="FileChooserDialogImpl/0.0.1920.1032@0.0.1920.1032" timestamp="1650419988591" />
+    <state width="1858" height="276" key="GridCell.Tab.0.bottom" timestamp="1650453303340">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1858" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1650453303340" />
+    <state width="1858" height="276" key="GridCell.Tab.0.center" timestamp="1650453303339">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1858" height="276" key="GridCell.Tab.0.center/0.0.1920.1032@0.0.1920.1032" timestamp="1650453303339" />
+    <state width="1858" height="276" key="GridCell.Tab.0.left" timestamp="1650453303339">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1858" height="276" key="GridCell.Tab.0.left/0.0.1920.1032@0.0.1920.1032" timestamp="1650453303339" />
+    <state width="1858" height="276" key="GridCell.Tab.0.right" timestamp="1650453303339">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1858" height="276" key="GridCell.Tab.0.right/0.0.1920.1032@0.0.1920.1032" timestamp="1650453303339" />
+    <state width="1858" height="167" key="GridCell.Tab.1.bottom" timestamp="1650452442550">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1858" height="167" key="GridCell.Tab.1.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1650452442550" />
+    <state width="1858" height="167" key="GridCell.Tab.1.center" timestamp="1650452442549">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1858" height="167" key="GridCell.Tab.1.center/0.0.1920.1032@0.0.1920.1032" timestamp="1650452442549" />
+    <state width="1858" height="167" key="GridCell.Tab.1.left" timestamp="1650452442549">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1858" height="167" key="GridCell.Tab.1.left/0.0.1920.1032@0.0.1920.1032" timestamp="1650452442549" />
+    <state width="1858" height="167" key="GridCell.Tab.1.right" timestamp="1650452442549">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1858" height="167" key="GridCell.Tab.1.right/0.0.1920.1032@0.0.1920.1032" timestamp="1650452442549" />
+    <state x="491" y="161" key="SettingsEditor" timestamp="1650338709874">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="491" y="161" key="SettingsEditor/0.0.1920.1032@0.0.1920.1032" timestamp="1650338709874" />
+    <state x="679" y="192" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1649936786527">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="679" y="192" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1032@0.0.1920.1032" timestamp="1649936786527" />
+    <state x="712" y="382" width="956" height="267" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration" timestamp="1650338703552">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="712" y="382" width="956" height="267" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration/0.0.1920.1032@0.0.1920.1032" timestamp="1650338703552" />
+    <state x="631" y="240" width="369" height="539" key="ftp.server.browser" timestamp="1650335231813">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="631" y="240" width="369" height="539" key="ftp.server.browser/0.0.1920.1032@0.0.1920.1032" timestamp="1650335231813" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ViTAE_Transformer_Scene_Text_Detection$debug__1_.coverage" NAME="debug (1) Coverage Results" MODIFIED="1650452124694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ViTAE_Transformer_Scene_Text_Detection$debug.coverage" NAME="debug Coverage Results" MODIFIED="1650450804024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/configs" />
+  </component>
+</project>

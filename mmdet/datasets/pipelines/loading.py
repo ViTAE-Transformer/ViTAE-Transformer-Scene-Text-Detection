@@ -384,7 +384,7 @@ class LoadAnnotations:
         if self.with_seg:
             results = self._load_semantic_seg(results)
         if self.with_ssl:
-            results = self._load_ssl_lossweight(results)
+            results = self._load_ssl_lossweight(results)  # ymy
         return results
 
     def __repr__(self):

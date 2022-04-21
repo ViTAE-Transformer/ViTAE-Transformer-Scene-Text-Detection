@@ -244,7 +244,7 @@ class DefaultFormatBundle:
                 padding_value=self.pad_val['seg'],
                 stack=True)
         if 'gt_lossweight' in results:
-            results['gt_lossweight'] = DC(to_tensor(results['gt_lossweight']))
+            results['gt_lossweight'] = DC(to_tensor(results['gt_lossweight']))  # ymy
         return results
 
     def _add_default_meta_keys(self, results):
@@ -347,7 +347,7 @@ class Collect:
         for key in self.keys:
             data[key] = results[key]
         if 'gt_lossweight' in results:
-            data['gt_lossweight'] = results['gt_lossweight']
+            data['gt_lossweight'] = results['gt_lossweight']  # ymy
         return data
 
     def __repr__(self):

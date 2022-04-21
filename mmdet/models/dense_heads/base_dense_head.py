@@ -328,13 +328,13 @@ class BaseDenseHead(BaseModule, metaclass=ABCMeta):
                 proposal_list (list[Tensor]): Proposals of each image.
         """
         outs = self(x)
-        gt_lossweight = kwargs.get('gt_lossweight', None)
+        gt_lossweight = kwargs.get('gt_lossweight', None)  # ymy
         if gt_labels is None:
             loss_inputs = outs + (gt_bboxes, img_metas)
         else:
             loss_inputs = outs + (gt_bboxes, gt_labels, img_metas)
 
-        losses = self.loss(*loss_inputs, gt_bboxes_ignore=gt_bboxes_ignore, gt_lossweight=gt_lossweight)
+        losses = self.loss(*loss_inputs, gt_bboxes_ignore=gt_bboxes_ignore, gt_lossweight=gt_lossweight)  # ymy
         if proposal_cfg is None:
             return losses
         else:
