@@ -103,7 +103,7 @@ Evaluation results of I3CL with different backbones on ArT.
 
 **Model:** 
 
-- To train I3CL model yourself, please download the pretrained ViTAEv2 used in this implementation from [here]() 
+- To train I3CL model yourself, please download the pretrained ViTAEv2 used in this implementation from [here](https://1drv.ms/u/s!AimBgYV7JjTlgRKwMDLQQ7QzPOJs?e=mzeeO4) 
 for backbone initialization. Please put it in [pretrained_model/ViTAE](./pretrained_model/ViTAE).
 - Full I3CL model with ViTAE backbone trained on ArT can be downloaded [here](https://1drv.ms/u/s!AimBgYV7JjTlgRH63hbJjWub5VMv?e=XUOrLb). You can put it in [pretrained_model/I3CL](./pretrained_model/I3CL).
 
