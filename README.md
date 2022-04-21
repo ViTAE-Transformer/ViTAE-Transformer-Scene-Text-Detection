@@ -53,7 +53,7 @@ Example results from paper.
 
 ![image](./demo.jpg)
 
-Evaluation results of I3CL with different backbones on ArT. Note that I3CL with ViTAE only adopt one step training stage with LSVT+MLT19+ArT training datasets in this repo. I3CL with ResNet series adopt three stage training strategy, i.e, pre-train on SynthText, mix-train on ReCTS+RCTW+LSVT+MLT19+ArT and lastly finetune on LSVT+MLT19+ArT.
+Evaluation results of I3CL with different backbones on ArT. *Note that I3CL with ViTAE only adopt one step training stage with LSVT+MLT19+ArT training datasets in this repo. I3CL with ResNet series adopt three stage training strategy, i.e, pre-train on SynthText, mix-train on ReCTS+RCTW+LSVT+MLT19+ArT and lastly finetune on LSVT+MLT19+ArT*.
 
 |Backbone|Model Link|Training Data|Recall|Precision|F-measure|
 |:------:|:------:|:------:|:------:|:------:|:------:|
@@ -102,7 +102,7 @@ Evaluation results of I3CL with different backbones on ArT. Note that I3CL with 
 
 **Model:** 
 
-- To train I3CL model yourself, please download the pretrained ViTAEv2 used in this implementation from here: [OneDrive](https://1drv.ms/u/s!AimBgYV7JjTlgRKwMDLQQ7QzPOJs?e=mzeeO4) | [百度网盘]. ResNet-50 w/ RegionCL(finetuning): [OneDrive] | [百度网盘]. ResNet-50 w/ RegionCL(w/o finetuning): [OneDrive] | [百度网盘]. For backbone initialization, please put them in [pretrained_model/ViTAE](./pretrained_model/ViTAE) or [pretrained_model/RegionCL](./pretrained_model/RegionCL).
+- To train I3CL model yourself, please download the pretrained ViTAEv2 used in this implementation from here: [OneDrive](https://1drv.ms/u/s!AimBgYV7JjTlgRKwMDLQQ7QzPOJs?e=mzeeO4) | [百度网盘]. ResNet-50 w/ RegionCL(finetuning): [OneDrive](https://1drv.ms/u/s!AimBgYV7JjTlgRNs8EMQlB1SI6CO?e=KaSQtl) | [百度网盘]. ResNet-50 w/ RegionCL(w/o finetuning): [OneDrive](https://1drv.ms/u/s!AimBgYV7JjTlgRTlX8j-HfnHNG6c?e=bixznC) | [百度网盘]. For backbone initialization, please put them in [pretrained_model/ViTAE](./pretrained_model/ViTAE) or [pretrained_model/RegionCL](./pretrained_model/RegionCL).
 - Full I3CL model with ViTAE backbone trained on ArT can be downloaded and put in [pretrained_model/I3CL](./pretrained_model/I3CL).
 
 **Data**
@@ -119,7 +119,7 @@ Evaluation results of I3CL with different backbones on ArT. Note that I3CL with 
     |lsvt_test|[Link](https://1drv.ms/u/s!AimBgYV7JjTldfOea-7Wcc_uVSE?e=I1IgvU)|[Link](https://pan.baidu.com/s/14y3W0XRCuqDboSXMlXTtJw) (pw:8ha3)|
     |icdar2019_mlt|[Link](https://1drv.ms/u/s!AimBgYV7JjTlbtKKo7-IFG32Yo4?e=XprWJb)|[Link](https://pan.baidu.com/s/1vHN6i4iTtUsDMa6eR7Py0Q) (pw:hmnj)|
     |rctw|[Link]|[Link] (pw:)|
-    |rects|[Link]|[Link] (pw:)|
+    |rects|[Link](https://1drv.ms/u/s!AimBgYV7JjTlgRWNyPwC5a04c-vX?e=hKK4az)|[Link] (pw:)|
 
     The file structure should look like:
     ```
