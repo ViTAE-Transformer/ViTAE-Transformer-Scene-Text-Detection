@@ -163,22 +163,28 @@ configs/i3cl_vitae_fpn/i3cl_vitae_fpn_ms_train.py --launcher pytorch --work-dir 
 - Distributed training with 4GPUs for **ResNet50** backbone:
 
 ```
-(1) python -m torch.distributed.launch --nproc_per_node=4 --master_port=29500 tools/train.py \
+step1:
+python -m torch.distributed.launch --nproc_per_node=4 --master_port=29500 tools/train.py \
 configs/i3cl_r50_fpn/i3cl_r50_fpn_ms_pretrain.py --launcher pytorch --work-dir ./out_dir/art_r50_pretrain/
-(2) python -m torch.distributed.launch --nproc_per_node=4 --master_port=29500 tools/train.py \
+step2:
+python -m torch.distributed.launch --nproc_per_node=4 --master_port=29500 tools/train.py \
 configs/i3cl_r50_fpn/i3cl_r50_fpn_ms_mixtrain.py --launcher pytorch --work-dir ./out_dir/art_r50_mixtrain/
-(3) python -m torch.distributed.launch --nproc_per_node=4 --master_port=29500 tools/train.py \
+step3:
+python -m torch.distributed.launch --nproc_per_node=4 --master_port=29500 tools/train.py \
 configs/i3cl_r50_fpn/i3cl_r50_fpn_ms_finetune.py --launcher pytorch --work-dir ./out_dir/art_r50_finetune/
 ```
 
 - Distributed training with 4GPUs for **ResNet50 w/ RegionCL** backbone:
 
 ```
-(1) python -m torch.distributed.launch --nproc_per_node=4 --master_port=29500 tools/train.py \
+step1:
+python -m torch.distributed.launch --nproc_per_node=4 --master_port=29500 tools/train.py \
 configs/i3cl_r50_regioncl_fpn/i3cl_r50_fpn_ms_pretrain.py --launcher pytorch --work-dir ./out_dir/art_r50_regioncl_pretrain/
-(2) python -m torch.distributed.launch --nproc_per_node=4 --master_port=29500 tools/train.py \
+step2:
+python -m torch.distributed.launch --nproc_per_node=4 --master_port=29500 tools/train.py \
 configs/i3cl_r50_regioncl_fpn/i3cl_r50_fpn_ms_mixtrain.py --launcher pytorch --work-dir ./out_dir/art_r50_regioncl_mixtrain/
-(3) python -m torch.distributed.launch --nproc_per_node=4 --master_port=29500 tools/train.py \
+step3:
+python -m torch.distributed.launch --nproc_per_node=4 --master_port=29500 tools/train.py \
 configs/i3cl_r50_regioncl_fpn/i3cl_r50_fpn_ms_finetune.py --launcher pytorch --work-dir ./out_dir/art_r50_regioncl_finetune/
 ```
 
