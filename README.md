@@ -57,7 +57,7 @@ Evaluation results of I3CL with different backbones on ArT. *Note that I3CL with
 
 |Backbone|Model Link|Training Data|Recall|Precision|F-measure|
 |:------:|:------:|:------:|:------:|:------:|:------:|
-|<p>ViTAEv2<br>[this repo]</p>|<p>[OneDrive](https://1drv.ms/u/s!AimBgYV7JjTlgRH63hbJjWub5VMv?e=XUOrLb)/<br>[百度网盘](pw:)</p>|LSVT,MLT19,ArT|**75.4**|82.8|78.9|
+|<p>ViTAEv2<br>[this repo]</p>|<p>[OneDrive](https://1drv.ms/u/s!AimBgYV7JjTlgRH63hbJjWub5VMv?e=XUOrLb)/<br>[百度网盘](https://pan.baidu.com/s/1UQ8WUlk5dtRRJIKgZTWBXA) (pw:w754)</p>|LSVT,MLT19,ArT|**75.4**|82.8|78.9|
 |<p>ResNet-50<br>[paper]</p>|-|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT|71.3|82.7|76.6|
 |<p>ResNet-50 w/ RegionCL(finetuning)<br>[paper]</p>|-|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT|72.6|81.9|77.0|
 |<p>ResNet-50 w/ RegionCL(w/o finetuning)<br>[paper]</p>|-|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT|73.5|81.6|77.3|
@@ -102,7 +102,7 @@ Evaluation results of I3CL with different backbones on ArT. *Note that I3CL with
 
 **Model:** 
 
-- To train I3CL model yourself, please download the pretrained ViTAEv2 used in this implementation from here: [OneDrive](https://1drv.ms/u/s!AimBgYV7JjTlgRKwMDLQQ7QzPOJs?e=mzeeO4) | [百度网盘]. ResNet-50 w/ RegionCL(finetuning): [OneDrive](https://1drv.ms/u/s!AimBgYV7JjTlgRNs8EMQlB1SI6CO?e=KaSQtl) | [百度网盘]. ResNet-50 w/ RegionCL(w/o finetuning): [OneDrive](https://1drv.ms/u/s!AimBgYV7JjTlgRTlX8j-HfnHNG6c?e=bixznC) | [百度网盘]. For backbone initialization, please put them in [pretrained_model/ViTAE](./pretrained_model/ViTAE) or [pretrained_model/RegionCL](./pretrained_model/RegionCL).
+- To train I3CL model yourself, please download the pretrained ViTAEv2 used in this implementation from here: [OneDrive](https://1drv.ms/u/s!AimBgYV7JjTlgRKwMDLQQ7QzPOJs?e=mzeeO4) | [百度网盘](https://pan.baidu.com/s/1su-IP6Gl1VJKBHfwtKIoow) (pw:petb). ResNet-50 w/ RegionCL(finetuning): [OneDrive](https://1drv.ms/u/s!AimBgYV7JjTlgRNs8EMQlB1SI6CO?e=KaSQtl) | [百度网盘](https://pan.baidu.com/s/1T2vmyQOpjzIfPveKKwZr-Q) (pw:y598). ResNet-50 w/ RegionCL(w/o finetuning): [OneDrive](https://1drv.ms/u/s!AimBgYV7JjTlgRTlX8j-HfnHNG6c?e=bixznC) | [百度网盘](https://pan.baidu.com/s/1_6nVTdxRpUi5kwp1MhTI9g) (pw:cybh). For backbone initialization, please put them in [pretrained_model/ViTAE](./pretrained_model/ViTAE) or [pretrained_model/RegionCL](./pretrained_model/RegionCL).
 - Full I3CL model with ViTAE backbone trained on ArT can be downloaded and put in [pretrained_model/I3CL](./pretrained_model/I3CL).
 
 **Data**
@@ -118,8 +118,8 @@ Evaluation results of I3CL with different backbones on ArT. *Note that I3CL with
     |lsvt|[Link](https://1drv.ms/u/s!AimBgYV7JjTlae-oSHbbwqD-H8o?e=EjB9d5)|[Link](https://pan.baidu.com/s/1UTdD8fcdyXXdQMzfMBbHoQ) (pw:wly0)|
     |lsvt_test|[Link](https://1drv.ms/u/s!AimBgYV7JjTldfOea-7Wcc_uVSE?e=I1IgvU)|[Link](https://pan.baidu.com/s/14y3W0XRCuqDboSXMlXTtJw) (pw:8ha3)|
     |icdar2019_mlt|[Link](https://1drv.ms/u/s!AimBgYV7JjTlbtKKo7-IFG32Yo4?e=XprWJb)|[Link](https://pan.baidu.com/s/1vHN6i4iTtUsDMa6eR7Py0Q) (pw:hmnj)|
-    |rctw|[Link](https://1drv.ms/u/s!AimBgYV7JjTlgRawI3dSiEOhp6Is?e=D7MktG)|[Link] (pw:)|
-    |rects|[Link](https://1drv.ms/u/s!AimBgYV7JjTlgRWNyPwC5a04c-vX?e=hKK4az)|[Link] (pw:)|
+    |rctw|[Link](https://1drv.ms/u/s!AimBgYV7JjTlgRawI3dSiEOhp6Is?e=D7MktG)|[Link](https://pan.baidu.com/s/1b6_pV1McdntgtudjdtVTLA) (pw:ngge)|
+    |rects|[Link](https://1drv.ms/u/s!AimBgYV7JjTlgRWNyPwC5a04c-vX?e=hKK4az)|[Link](https://pan.baidu.com/s/1wp1Qrm28Ycr4s-Asl4-x6Q) (pw:y00o)|
 
     The file structure should look like:
     ```
