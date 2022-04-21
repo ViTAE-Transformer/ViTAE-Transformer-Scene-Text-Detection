@@ -128,4 +128,4 @@ runner = dict(type='EpochBasedRunner', max_epochs=10)
 find_unused_parameters=True
 
 # resume_from = '...'
-load_from = './out_dir/art_r50_mixtrain/epoch_10.pth'
+load_from = './out_dir/art_r50_regioncl_mixtrain/epoch_10.pth'

@@ -147,4 +147,4 @@ runner = dict(type='EpochBasedRunner', max_epochs=6)
 find_unused_parameters=True
 
 # resume_from = '...'
-load_from = './out_dir/art_r50_ssl/epoch_10.pth'
+load_from = './out_dir/art_r50_regioncl_ssl/epoch_10.pth'

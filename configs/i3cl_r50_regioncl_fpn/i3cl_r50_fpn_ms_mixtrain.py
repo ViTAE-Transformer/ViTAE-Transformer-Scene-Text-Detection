@@ -152,4 +152,4 @@ runner = dict(type='EpochBasedRunner', max_epochs=10)
 find_unused_parameters=True
 
 # resume_from = '...'
-load_from = './out_dir/art_r50_pretrain/epoch_20.pth'
+load_from = './out_dir/art_r50_regioncl_pretrain/epoch_20.pth'
