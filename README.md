@@ -1,7 +1,7 @@
 <h1 align="center"> I3CL: Intra- and Inter-Instance Collaborative Learning for Arbitrary-shaped Scene Text Detection </h1> 
 
 <p align="center">
-<a href="https://arxiv.org/abs/2108.01343"><img src="https://img.shields.io/badge/arXiv-Paper-<color>"></a>
+<a href="https://arxiv.org/abs/2108.01343v3"><img src="https://img.shields.io/badge/arXiv-Paper-<color>"></a>
 </p>
 
 <p align="center">
@@ -53,7 +53,7 @@ Example results from paper.
 
 ![image](./demo.jpg)
 
-Evaluation results of I3CL with different backbones on ArT. *Note that: (1) I3CL with ViTAE only adopt one training stage with LSVT+MLT19+ArT training datasets in this repo. I3CL with ResNet series adopt three training stages, i.e, pre-train on SynthText, mix-train on ReCTS+RCTW+LSVT+MLT19+ArT and lastly finetune on LSVT+MLT19+ArT. (2) Origin implementation of ResNet series is based on Detectron2. The results and model link of ResNet50 will be updated soon in this implementation.*
+Evaluation results of I3CL with different backbones on ArT. *Note that: (1) I3CL with ViTAE only adopts one training stage with LSVT+MLT19+ArT training datasets in this repo. ResNet series adopt three training stages, i.e, pre-train on SynthText, mix-train on ReCTS+RCTW+LSVT+MLT19+ArT and lastly finetune on LSVT+MLT19+ArT. (2) Origin implementation of ResNet series is based on Detectron2. The results and model links of ResNet-50 will be updated soon in this implementation.*
 
 |Backbone|Model Link|Training Data|Recall|Precision|F-measure|
 |:------:|:------:|:------:|:------:|:------:|:------:|
@@ -77,7 +77,7 @@ Evaluation results of I3CL with different backbones on ArT. *Note that: (1) I3CL
 >- GCC >= 5
 >- MMCV (We use mmcv-full==1.4.3)
 
-1. Create a conda virtual environment and activate it. Note that This implementation is based on mmdetection 2.20.0.
+1. Create a conda virtual environment and activate it. Note that this implementation is based on mmdetection 2.20.0 version.
 
 2. Install Pytorch and torchvision following [official instructions](https://pytorch.org).
 
@@ -220,7 +220,7 @@ python demo/art_demo.py --checkpoint pretrained_model/I3CL/vitae_epoch_12.pth --
 
 This project is for research purpose only.
 
-If you are interested in our work, please consider citing our work.
+If you are interested in our work, please consider citing our work. [Arxiv](https://arxiv.org/abs/2108.01343v3)
 
 Please post issues to let us know if you encounter any problems.
 
