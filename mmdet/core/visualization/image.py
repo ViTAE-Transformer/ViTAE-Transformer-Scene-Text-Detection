@@ -85,7 +85,7 @@ def imshow_det_bboxes(img,
         assert bboxes.shape[1] == 5
         scores = bboxes[:, -1]
         inds = scores > score_thr
-        demo_score_list_pre = scores[inds]  # edited by ymy
+        demo_score_list_pre = scores[inds]
         bboxes = bboxes[inds, :]
         labels = labels[inds]
         if segms is not None:
@@ -134,7 +134,7 @@ def imshow_det_bboxes(img,
 
     polygons = []
     color = []
-    demo_polygon_list = []  # ymy
+    demo_polygon_list = []
     demo_score_list = []
     random_color = [(0,255,0),(255,0,0),(0,0,255),(0,255,255),(255,0,255),(255,255,0)]
     for i, (bbox, label) in enumerate(zip(bboxes, labels)):
@@ -167,8 +167,6 @@ def imshow_det_bboxes(img,
             color_mask = np.array(random.choice(random_color), dtype=np.uint8)
             mask = segms[i].astype(bool)
             img[mask] = img[mask] * 0.5 + color_mask * 0.5
-            
-             # ymy
             demo_mask_bitmap = np.ascontiguousarray((1*mask))
             res_list = cv2.findContours((demo_mask_bitmap*255).astype(np.uint8), cv2.RETR_CCOMP, cv2.CHAIN_APPROX_NONE)
             poly_res = res_list[-2]
@@ -206,7 +204,7 @@ def imshow_det_bboxes(img,
 
     plt.close()
 
-    return demo_polygon_list, demo_score_list  # ymy
+    return demo_polygon_list, demo_score_list
 
 
 def imshow_gt_det_bboxes(img,
