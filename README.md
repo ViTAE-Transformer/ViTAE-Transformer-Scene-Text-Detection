@@ -53,7 +53,7 @@ Example results from paper.
 
 ![image](./demo.jpg)
 
-Evaluation results of I3CL with different backbones on ArT. *Note that I3CL with ViTAE only adopt one step training stage with LSVT+MLT19+ArT training datasets in this repo. I3CL with ResNet series adopt three stage training strategy, i.e, pre-train on SynthText, mix-train on ReCTS+RCTW+LSVT+MLT19+ArT and lastly finetune on LSVT+MLT19+ArT*.
+Evaluation results of I3CL with different backbones on ArT. *Note that:(1) I3CL with ViTAE only adopt one step training stage with LSVT+MLT19+ArT training datasets in this repo. I3CL with ResNet series adopt three steps training strategy, i.e, pre-train on SynthText, mix-train on ReCTS+RCTW+LSVT+MLT19+ArT and lastly finetune on LSVT+MLT19+ArT. (2) Origin implementation of ResNet series is based on Detectron2. The results and model link of ResNet50 will be updated soon.*
 
 |Backbone|Model Link|Training Data|Recall|Precision|F-measure|
 |:------:|:------:|:------:|:------:|:------:|:------:|
