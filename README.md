@@ -14,7 +14,7 @@
 </p >
 
 *This is the repo for the paper "I3CL: Intra- and Inter-Instance Collaborative Learning for Arbitrary-shaped Scene Text Detection". 
-Note that I3CL with ViTAEv2, ResNet50 and ResNet50 w/ RegionCL backbone are included.*
+I3CL with ViTAEv2, ResNet50 and ResNet50 w/ RegionCL backbone are included.*
 
 ***
 
