@@ -53,7 +53,7 @@ Example results from paper.
 
 ![image](./demo.jpg)
 
-Evaluation results of I3CL with different backbones on ArT. *Note that:(1) I3CL with ViTAE only adopt one step training stage with LSVT+MLT19+ArT training datasets in this repo. I3CL with ResNet series adopt three steps training strategy, i.e, pre-train on SynthText, mix-train on ReCTS+RCTW+LSVT+MLT19+ArT and lastly finetune on LSVT+MLT19+ArT. (2) Origin implementation of ResNet series is based on Detectron2. The results and model link of ResNet50 will be updated soon.*
+Evaluation results of I3CL with different backbones on ArT. *Note that: (1) I3CL with ViTAE only adopt one training stage with LSVT+MLT19+ArT training datasets in this repo. I3CL with ResNet series adopt three training stages, i.e, pre-train on SynthText, mix-train on ReCTS+RCTW+LSVT+MLT19+ArT and lastly finetune on LSVT+MLT19+ArT. (2) Origin implementation of ResNet series is based on Detectron2. The results and model link of ResNet50 will be updated soon in this implementation.*
 
 |Backbone|Model Link|Training Data|Recall|Precision|F-measure|
 |:------:|:------:|:------:|:------:|:------:|:------:|
@@ -107,7 +107,7 @@ Evaluation results of I3CL with different backbones on ArT. *Note that:(1) I3CL 
 
 **Data**
 
-- We use coco format training datasets. Some offline augmented ArT training datasets are used. `lsvt-test` is only used to train SSL model. Files named `train_lossweight.json` are the provided pseudo-label for SSL training. You can download correspoding datasets in config file from here and put them in [data/](./data):
+- Coco format training datasets are utilized. Some offline augmented ArT training datasets are used. `lsvt-test` is only used to train SSL(**S**emi-**S**upervised **L**earning) model in paper. Files named `train_lossweight.json` are the provided pseudo-label for SSL training. You can download correspoding datasets in config file from here and put them in [data/](./data):
 
     |Dataset|<p>Link<br>(OneDrive)</p>|<p>Link<br>(Baidu Wangpan百度网盘)</p>|
     |:------:|:------:|:------:|
@@ -162,28 +162,37 @@ configs/i3cl_vitae_fpn/i3cl_vitae_fpn_ms_train.py --launcher pytorch --work-dir 
 
 - Distributed training with 4GPUs for **ResNet50** backbone:
 
+
+`stage1`:
 ```
-step1:
 python -m torch.distributed.launch --nproc_per_node=4 --master_port=29500 tools/train.py \
 configs/i3cl_r50_fpn/i3cl_r50_fpn_ms_pretrain.py --launcher pytorch --work-dir ./out_dir/art_r50_pretrain/
-step2:
+```
+`stage2`:
+```
 python -m torch.distributed.launch --nproc_per_node=4 --master_port=29500 tools/train.py \
 configs/i3cl_r50_fpn/i3cl_r50_fpn_ms_mixtrain.py --launcher pytorch --work-dir ./out_dir/art_r50_mixtrain/
-step3:
+```
+`stage3`:
+```
 python -m torch.distributed.launch --nproc_per_node=4 --master_port=29500 tools/train.py \
 configs/i3cl_r50_fpn/i3cl_r50_fpn_ms_finetune.py --launcher pytorch --work-dir ./out_dir/art_r50_finetune/
 ```
 
 - Distributed training with 4GPUs for **ResNet50 w/ RegionCL** backbone:
 
+`stage1`:
 ```
-step1:
 python -m torch.distributed.launch --nproc_per_node=4 --master_port=29500 tools/train.py \
 configs/i3cl_r50_regioncl_fpn/i3cl_r50_fpn_ms_pretrain.py --launcher pytorch --work-dir ./out_dir/art_r50_regioncl_pretrain/
-step2:
+```
+`stage2`:
+```
 python -m torch.distributed.launch --nproc_per_node=4 --master_port=29500 tools/train.py \
 configs/i3cl_r50_regioncl_fpn/i3cl_r50_fpn_ms_mixtrain.py --launcher pytorch --work-dir ./out_dir/art_r50_regioncl_mixtrain/
-step3:
+```
+`stage3`:
+```
 python -m torch.distributed.launch --nproc_per_node=4 --master_port=29500 tools/train.py \
 configs/i3cl_r50_regioncl_fpn/i3cl_r50_fpn_ms_finetune.py --launcher pytorch --work-dir ./out_dir/art_r50_regioncl_finetune/
 ```
