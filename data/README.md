@@ -1,2 +1,2 @@
-Put images and annotations here.
+Put datasets here.
 
