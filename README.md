@@ -58,12 +58,13 @@ Evaluation results of I3CL with different backbones on ArT. *Note that: (1) I3CL
 |Backbone|Model Link|Training Data|Recall|Precision|F-measure|
 |:------:|:------:|:------:|:------:|:------:|:------:|
 |<p>ViTAEv2-S<br>[this repo]</p>|<p>[OneDrive](https://1drv.ms/u/s!AimBgYV7JjTlgRH63hbJjWub5VMv?e=XUOrLb)/<br>[百度网盘](https://pan.baidu.com/s/1UQ8WUlk5dtRRJIKgZTWBXA) (pw:w754)</p>|LSVT,MLT19,ArT|**75.4**|82.8|78.9|
-|<p>ResNet-50<br>[paper]</p>|-|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT|71.3|82.7|76.6|
-|<p>ResNet-50 w/ RegionCL(finetuning)<br>[paper]</p>|-|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT|72.6|81.9|77.0|
-|<p>ResNet-50 w/ RegionCL(w/o finetuning)<br>[paper]</p>|-|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT|73.5|81.6|77.3|
-|<p>ResNeXt-101<br>[paper]</p>|-|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT|74.1|85.5|79.4|
-|<p>ResNeSt-101<br>[paper]</p>|-|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT|75.1|**86.3**|**80.3**|
-|<p>ResNeXt-151<br>[paper]</p>|-|SynthText,ReCTS,RCTW,LSVT,MLT19,ArT|74.9|86.0|80.1|
+|<p>ResNet-50<br>[paper]</p>|-|SynthText800K,ReCTS,RCTW,LSVT,MLT19,ArT|71.3|82.7|76.6|
+|<p>ResNet-50<br>[this repo]</p>|<p>[OneDrive]/<br>[百度网盘](https://pan.baidu.com/s/1uhk3nQi48yxgT-W82xtgSw) (pw:acy0)</p>|SynthText150K,ReCTS,RCTW,LSVT,MLT19,ArT|73.69|81.22|77.27|
+|<p>ResNet-50 w/ RegionCL(finetuning)<br>[paper]</p>|-|SynthText800K,ReCTS,RCTW,LSVT,MLT19,ArT|72.6|81.9|77.0|
+|<p>ResNet-50 w/ RegionCL(w/o finetuning)<br>[paper]</p>|-|SynthText800K,ReCTS,RCTW,LSVT,MLT19,ArT|73.5|81.6|77.3|
+|<p>ResNeXt-101<br>[paper]</p>|-|SynthText800K,ReCTS,RCTW,LSVT,MLT19,ArT|74.1|85.5|79.4|
+|<p>ResNeSt-101<br>[paper]</p>|-|SynthText800K,ReCTS,RCTW,LSVT,MLT19,ArT|75.1|**86.3**|**80.3**|
+|<p>ResNeXt-151<br>[paper]</p>|-|SynthText800K,ReCTS,RCTW,LSVT,MLT19,ArT|74.9|86.0|80.1|
 
 ## Usage
 
