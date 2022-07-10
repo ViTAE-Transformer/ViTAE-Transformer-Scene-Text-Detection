@@ -223,9 +223,17 @@ python demo/art_demo.py --checkpoint pretrained_model/I3CL/vitae_epoch_12.pth --
 
 This project is for research purpose only.
 
-If you are interested in our work, please consider citing our work. [Arxiv](https://arxiv.org/abs/2108.01343v3)
-
-Please post issues to let us know if you encounter any problems.
+If you find I3CL useful in your research, please consider citing:
+```
+@article{du2022i3cl,
+  title={I3CL: Intra-and Inter-Instance Collaborative Learning for Arbitrary-shaped Scene Text Detection},
+  author={Du, Bo and Ye, Jian and Zhang, Jing and Liu, Juhua and Tao, Dacheng},
+  journal={International Journal of Computer Vision},
+  pages={1--17},
+  year={2022},
+  publisher={Springer}
+}
+```
 
 ## Acknowledgement
 
