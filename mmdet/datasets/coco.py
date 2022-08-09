@@ -170,14 +170,12 @@ class CocoDataset(CustomDataset):
         else:
             gt_bboxes_ignore = np.zeros((0, 4), dtype=np.float32)
 
-        # edited by ymy
-        if gt_lossweight[0] is not None:
+        if len(gt_lossweight) != 0 and gt_lossweight[0] is not None:
             gt_lossweight = np.array(gt_lossweight, dtype=np.float32)
 
         seg_map = img_info['filename'].replace('jpg', 'png')
 
-        # edited by ymy
-        if gt_lossweight[0] is not None:
+        if len(gt_lossweight) != 0 and gt_lossweight[0] is not None:
             ann = dict(
                 bboxes=gt_bboxes,
                 labels=gt_labels,
