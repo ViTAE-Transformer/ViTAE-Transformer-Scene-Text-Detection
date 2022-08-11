@@ -11,6 +11,12 @@ train_pipeline = [
     dict(type='AutoAugment',
              policies=[
                  [
+                     dict(type='Resize',img_scale=[(480,1333),(512,1333),(544,1333),(576,1333),(608,1333),
+                                                   (640,1333),(704,1333),(732,1333),(768,1333),(800,1600),
+                                                   (832,1600),(864,1600),(896,1600)],
+                          multiscale_mode='value', keep_ratio=True)
+                 ],
+                 [
                      dict(type='Rotate', prob=0.5, level=10, max_rotate_angle=10),
                      dict(type='Resize',img_scale=[(480,1333),(512,1333),(544,1333),(576,1333),(608,1333),
                                                    (640,1333),(704,1333),(732,1333),(768,1333),(800,1600),
