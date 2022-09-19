@@ -53,7 +53,7 @@ Example results from paper.
 
 ![image](./demo.jpg)
 
-Evaluation results of I3CL with different backbones on ArT. *Note that: (1) I3CL with ViTAE only adopts one training stage with LSVT+MLT19+ArT training datasets in this repo. ResNet series adopt three training stages, i.e, pre-train on SynthText, mix-train on ReCTS+RCTW+LSVT+MLT19+ArT and lastly finetune on LSVT+MLT19+ArT. (2) Origin implementation of ResNet series is based on Detectron2. The results and model links of ResNet-50 will be updated soon in this implementation.*
+Evaluation results of I3CL with different backbones on ArT. *Note that: (1) I3CL with ViTAE only adopts one training stage with LSVT+MLT19+ArT training datasets in this repo. ResNet series adopt three training stages, i.e, pre-train on SynthText, mix-train on ReCTS+RCTW+LSVT+MLT19+ArT and lastly finetune on LSVT+MLT19+ArT. (2) Original implementation of ResNet series is based on Detectron2. The results and model links of ResNet-50 will be updated soon in this implementation.*
 
 |Backbone|Model Link|Training Data|Recall|Precision|F-measure|
 |:------:|:------:|:------:|:------:|:------:|:------:|
@@ -64,9 +64,6 @@ Evaluation results of I3CL with different backbones on ArT. *Note that: (1) I3CL
 |<p>ResNet-50 w/ RegionCL(finetuning)<br>[**this repo**]</p>|<p>[OneDrive](https://1drv.ms/u/s!AimBgYV7JjTlgR0EnuXCFbYD-SVG?e=fXaEfa)/<br>[百度网盘](https://pan.baidu.com/s/1bXgJpEn5kX1sWmZoukddjg) (pw:k13v)</p>|<p>SynthText150K<br>ReCTS,RCTW,LSVT,MLT19,ArT</p>|75.4|80.6|77.9|
 |<p>ResNet-50 w/ RegionCL(w/o finetuning)<br>[paper]</p>|-|<p>SynthText800K<br>ReCTS,RCTW,LSVT,MLT19,ArT</p>|73.5|81.6|77.3|
 |<p>ResNet-50 w/ RegionCL(w/o finetuning)<br>[**this repo**]</p>|<p>[OneDrive](https://1drv.ms/u/s!AimBgYV7JjTlgSCIBmXyBVoMpj-S?e=ajfdio)/<br>[百度网盘](https://pan.baidu.com/s/1B84UAfV3S5R6HzBR8j_P6w) (pw:7k84)</p>|<p>SynthText150K<br>ReCTS,RCTW,LSVT,MLT19,ArT</p>|75.1|80.6|77.8|
-|<p>ResNeXt-101<br>[paper]</p>|-|<p>SynthText800K<br>ReCTS,RCTW,LSVT,MLT19,ArT</p>|74.1|85.5|79.4|
-|<p>ResNeSt-101<br>[paper]</p>|-|<p>SynthText800K<br>ReCTS,RCTW,LSVT,MLT19,ArT</p>|75.1|**86.3**|**80.3**|
-|<p>ResNeXt-151<br>[paper]</p>|-|<p>SynthText800K<br>ReCTS,RCTW,LSVT,MLT19,ArT</p>|74.9|86.0|80.1|
 
 ## Usage
 
