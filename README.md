@@ -16,7 +16,7 @@ This repo contains a comprehensive list of our research works related to **scene
 
 [3. I3CL: Intra- and Inter-Instance Collaborative Learning for Arbitrary-shaped Scene Text Detection [IJCV-2022]](#i3cl)
 
-<a href="https://arxiv.org/abs/2108.01343"><img  src="https://img.shields.io/badge/arxiv-Paper-brightgreen" ></a> <a href="https://github.com/ViTAE-Transformer/I3CL"><img src="https://img.shields.io/github/stars/ViTAE-Transformer/I3CL.svg?logo=github&label=Stars"></a>
+<a href="https://arxiv.org/abs/2108.01343"><img  src="https://img.shields.io/badge/arxiv-Paper-brightgreen" ></a> <a href="https://link.springer.com/article/10.1007/s11263-022-01616-6"><img src="https://img.shields.io/badge/publication-Paper-brightgreen"></a> <a href="https://github.com/ViTAE-Transformer/I3CL"><img src="https://img.shields.io/github/stars/ViTAE-Transformer/I3CL.svg?logo=github&label=Stars"></a>
 
 ## Projects
 
