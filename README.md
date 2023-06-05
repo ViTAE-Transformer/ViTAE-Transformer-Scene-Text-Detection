@@ -6,19 +6,35 @@ This repo contains a comprehensive list of our research works related to **scene
 
 ## Overview
 
-[1. DeepSolo: Let Transformer Decoder with Explicit Points Solo for Text Spotting [CVPR-2023]](#deepsolo)
+[1. DeepSolo++: Let Transformer Decoder with Explicit Points Solo for Text Spotting [ArXiv-2023]](#deepsolo++)
+
+<a href="https://arxiv.org/abs/2305.19957"><img  src="https://img.shields.io/badge/arxiv-Paper-brightgreen" ></a> <a href="https://github.com/ViTAE-Transformer/DeepSolo"><img src="https://img.shields.io/github/stars/ViTAE-Transformer/DeepSolo.svg?logo=github&label=Stars"></a>
+
+[2. DeepSolo: Let Transformer Decoder with Explicit Points Solo for Text Spotting [CVPR-2023]](#deepsolo)
 
 <a href="https://arxiv.org/abs/2211.10772"><img  src="https://img.shields.io/badge/arxiv-Paper-brightgreen" ></a> <a href="https://github.com/ViTAE-Transformer/DeepSolo"><img src="https://img.shields.io/github/stars/ViTAE-Transformer/DeepSolo.svg?logo=github&label=Stars"></a>
 
-[2. DPText-DETR: Towards Better Scene Text Detection with Dynamic Points in Transformer [AAAI-2023]](#dptext)
+[3. DPText-DETR: Towards Better Scene Text Detection with Dynamic Points in Transformer [AAAI-2023]](#dptext)
 
 <a href="https://arxiv.org/abs/2207.04491"><img  src="https://img.shields.io/badge/arxiv-Paper-brightgreen" ></a> <a href="https://github.com/ymy-k/DPText-DETR"><img src="https://img.shields.io/github/stars/ymy-k/DPText-DETR.svg?logo=github&label=Stars"></a>
 
-[3. I3CL: Intra- and Inter-Instance Collaborative Learning for Arbitrary-shaped Scene Text Detection [IJCV-2022]](#i3cl)
+[4. I3CL: Intra- and Inter-Instance Collaborative Learning for Arbitrary-shaped Scene Text Detection [IJCV-2022]](#i3cl)
 
 <a href="https://arxiv.org/abs/2108.01343"><img  src="https://img.shields.io/badge/arxiv-Paper-brightgreen" ></a> <a href="https://link.springer.com/article/10.1007/s11263-022-01616-6"><img src="https://img.shields.io/badge/publication-Paper-brightgreen"></a> <a href="https://github.com/ViTAE-Transformer/I3CL"><img src="https://img.shields.io/github/stars/ViTAE-Transformer/I3CL.svg?logo=github&label=Stars"></a>
 
 ## Projects
+
+### <span id="deepsolo++">📘 DeepSolo++: Let Transformer Decoder with Explicit Points Solo for Text Spotting [ArXiv-2023]</span>
+
+<em>Maoyuan Ye<sup>&#8727;</sup>, Jing Zhang<sup>&#8727;</sup>, Shanshan Zhao, Juhua Liu, Tongliang Liu, Bo Du, and Dacheng Tao</em>.
+
+[Paper](https://arxiv.org/abs/2305.19957) | [Github Code](https://github.com/ViTAE-Transformer/DeepSolo) | [BibTex](./assets/ArXiv_2023_DeepSolo++/deepsolo++.bib)
+
+We propose simple yet effective baseline models named DeepSolo and DeepSolo++ for monolingual and multilingual text spotting, taking the merit of a novel explicit point query form that provides **a unified and pivotal representation for different tasks**. With a single decoder and several simple prediction heads (a linear layer or MLP), we present a much simpler method compared with previous state-of-the-art (SOTA) text spotters. Our method shows several good properties, including **1) simplicity of model structure and training pipeline, 2) efficiency of training and inference, and 3) extensibility of character class, language, and task**. Extensive experiments demonstrate that our method has achieved SOTA performance while enjoying some other distinctions, such as the effectiveness on dense and long text, and compatibility to line annotations.
+
+<img src="./assets/ArXiv_2023_DeepSolo++/deepsolo++.png" width="100%">
+
+***
 
 ### <span id="deepsolo">📘 DeepSolo: Let Transformer Decoder with Explicit Points Solo for Text Spotting [CVPR-2023]</span>
 
