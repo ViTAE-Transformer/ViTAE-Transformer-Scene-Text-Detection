@@ -6,7 +6,7 @@ This repo contains a comprehensive list of our research works related to **scene
 
 ## Overview
 
-[1. DeepSolo++: Let Transformer Decoder with Explicit Points Solo for Text Spotting [ArXiv-2023]](#deepsolo++)
+[1. DeepSolo++: Let Transformer Decoder with Explicit Points Solo for Multilingual Text Spotting [ArXiv-2023]](#deepsolo++)
 
 <a href="https://arxiv.org/abs/2305.19957"><img  src="https://img.shields.io/badge/arxiv-Paper-brightgreen" ></a> <a href="https://github.com/ViTAE-Transformer/DeepSolo"><img src="https://img.shields.io/github/stars/ViTAE-Transformer/DeepSolo.svg?logo=github&label=Stars"></a>
 
@@ -24,7 +24,7 @@ This repo contains a comprehensive list of our research works related to **scene
 
 ## Projects
 
-### <span id="deepsolo++">📘 DeepSolo++: Let Transformer Decoder with Explicit Points Solo for Text Spotting [ArXiv-2023]</span>
+### <span id="deepsolo++">📘 DeepSolo++: Let Transformer Decoder with Explicit Points Solo for Multilingual Text Spotting [ArXiv-2023]</span>
 
 <em>Maoyuan Ye<sup>&#8727;</sup>, Jing Zhang<sup>&#8727;</sup>, Shanshan Zhao, Juhua Liu, Tongliang Liu, Bo Du, and Dacheng Tao</em>.
 
