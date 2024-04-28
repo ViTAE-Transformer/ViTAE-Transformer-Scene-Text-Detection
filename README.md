@@ -56,7 +56,7 @@ We identify a main bottleneck in the state-of-the-art video text spotter: the li
 
 ***
 
-### <span id="deepsolo++">📘 DeepSolo++: Let Transformer Decoder with Explicit Points Solo for Text Spotting [ArXiv-2023]</span>
+### <span id="deepsolo++">📘 DeepSolo++: Let Transformer Decoder with Explicit Points Solo for Multilingual Text Spotting [ArXiv-2023]</span>
 
 <em>Maoyuan Ye<sup>&#8727;</sup>, Jing Zhang<sup>&#8727;</sup>, Shanshan Zhao, Juhua Liu, Tongliang Liu, Bo Du, and Dacheng Tao</em>.
 
