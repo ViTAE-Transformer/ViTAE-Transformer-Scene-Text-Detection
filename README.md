@@ -1,28 +1,60 @@
 <h1 align="center">Scene Text Detection and Spotting</h1>
 
 
-This repo contains a comprehensive list of our research works related to **scene text detection and spotting**. For any related questions, please contact <strong><a href="https://github.com/ymy-k/">Maoyuan Ye</a></strong> at [yemaoyuan@whu.edu.cn](mailto:yemaoyuan@whu.edu.cn) .
+This repo contains a comprehensive list of our research works related to **scene text detection, spotting, and hierarchical segmentation**. For any related questions, please contact <strong><a href="https://github.com/ymy-k/">Maoyuan Ye</a></strong> at [yemaoyuan@whu.edu.cn](mailto:yemaoyuan@whu.edu.cn) .
 
 
 ## Overview
 
-[1. DeepSolo++: Let Transformer Decoder with Explicit Points Solo for Text Spotting [ArXiv-2023]](#deepsolo++)
+[1. Hi-SAM: Marrying Segment Anything Model for Hierarchical Text Segmentation [ArXiv-2024]](#hisam)
+
+<a href="https://arxiv.org/abs/2401.17904"><img  src="https://img.shields.io/badge/arxiv-Paper-brightgreen" ></a> <a href="https://github.com/ymy-k/Hi-SAM"><img src="https://img.shields.io/github/stars/ymy-k/Hi-SAM.svg?logo=github&label=Stars"></a>
+
+[2. GoMatching: A Simple Baseline for Video Text Spotting via Long and Short Term Matching [ArXiv-2024]](#gomatching)
+
+<a href="https://arxiv.org/abs/2401.07080"><img  src="https://img.shields.io/badge/arxiv-Paper-brightgreen" ></a> <a href="https://github.com/Hxyz-123/GoMatching"><img src="https://img.shields.io/github/stars/Hxyz-123/GoMatching.svg?logo=github&label=Stars"></a>
+
+[3. DeepSolo++: Let Transformer Decoder with Explicit Points Solo for Text Spotting [ArXiv-2023]](#deepsolo++)
 
 <a href="https://arxiv.org/abs/2305.19957"><img  src="https://img.shields.io/badge/arxiv-Paper-brightgreen" ></a> <a href="https://github.com/ViTAE-Transformer/DeepSolo"><img src="https://img.shields.io/github/stars/ViTAE-Transformer/DeepSolo.svg?logo=github&label=Stars"></a>
 
-[2. DeepSolo: Let Transformer Decoder with Explicit Points Solo for Text Spotting [CVPR-2023]](#deepsolo)
+[4. DeepSolo: Let Transformer Decoder with Explicit Points Solo for Text Spotting [CVPR-2023]](#deepsolo)
 
 <a href="https://arxiv.org/abs/2211.10772"><img  src="https://img.shields.io/badge/arxiv-Paper-brightgreen" ></a> <a href="https://github.com/ViTAE-Transformer/DeepSolo"><img src="https://img.shields.io/github/stars/ViTAE-Transformer/DeepSolo.svg?logo=github&label=Stars"></a>
 
-[3. DPText-DETR: Towards Better Scene Text Detection with Dynamic Points in Transformer [AAAI-2023]](#dptext)
+[5. DPText-DETR: Towards Better Scene Text Detection with Dynamic Points in Transformer [AAAI-2023]](#dptext)
 
 <a href="https://arxiv.org/abs/2207.04491"><img  src="https://img.shields.io/badge/arxiv-Paper-brightgreen" ></a> <a href="https://github.com/ymy-k/DPText-DETR"><img src="https://img.shields.io/github/stars/ymy-k/DPText-DETR.svg?logo=github&label=Stars"></a>
 
-[4. I3CL: Intra- and Inter-Instance Collaborative Learning for Arbitrary-shaped Scene Text Detection [IJCV-2022]](#i3cl)
+[6. I3CL: Intra- and Inter-Instance Collaborative Learning for Arbitrary-shaped Scene Text Detection [IJCV-2022]](#i3cl)
 
 <a href="https://arxiv.org/abs/2108.01343"><img  src="https://img.shields.io/badge/arxiv-Paper-brightgreen" ></a> <a href="https://link.springer.com/article/10.1007/s11263-022-01616-6"><img src="https://img.shields.io/badge/publication-Paper-brightgreen"></a> <a href="https://github.com/ViTAE-Transformer/I3CL"><img src="https://img.shields.io/github/stars/ViTAE-Transformer/I3CL.svg?logo=github&label=Stars"></a>
 
 ## Projects
+
+### <span id="hisam">📘 Hi-SAM: Marrying Segment Anything Model for Hierarchical Text Segmentation [ArXiv-2024]</span>
+
+<em>Maoyuan Ye, Jing Zhang, Juhua Liu, Chenyu Liu, Baocai Yin, Cong Liu, Bo Du, and Dacheng Tao</em>.
+
+[Paper](https://arxiv.org/abs/2401.17904) | [Github Code](https://github.com/ymy-k/Hi-SAM) | [BibTex](./assets/ArXiv_2024_Hi-SAM/Hi-SAM.bib)
+
+We propose the first unified model, Hi-SAM, for segmenting text across **stroke, word, text-line, and paragraph hierarchies**. Hi-SAM also achieves **layout analysis** as a by-product. Hi-SAM supports both **automatic mask generation and interactive promptable mode**. Given a single-point prompt, Hi-SAM provides word, text-line, and paragraph masks.
+
+<img src="./assets/ArXiv_2024_Hi-SAM/overview.png" width="100%">
+
+***
+
+### <span id="gomatching">📘 GoMatching: A Simple Baseline for Video Text Spotting via Long and Short Term Matching [ArXiv-2024]</span>
+
+<em>Haibin He, Maoyuan Ye, Jing Zhang, Juhua Liu, and Dacheng Tao</em>.
+
+[Paper](https://arxiv.org/abs/2401.07080) | [Github Code](https://github.com/Hxyz-123/GoMatching) | [BibTex](./assets/ArXiv_2024_GoMatching/GoMatching.bib)
+
+We identify a main bottleneck in the state-of-the-art video text spotter: the limited recognition capability. In response to this issue, we propose to efficiently turn an off-the-shelf query-based image text spotter into a specialist on video and present a simple baseline termed GoMatching. We establish the ArTVideo test set for addressing the absence of curved texts in current video text spotting datasets and evaluating the performance of video text spotters on videos with arbitrary-shaped text. ArTVideo contains 20 video clips, featuring 30% curved text approximately.
+
+<img src="./assets/ArXiv_2024_GoMatching/framework.png" width="100%">
+
+***
 
 ### <span id="deepsolo++">📘 DeepSolo++: Let Transformer Decoder with Explicit Points Solo for Text Spotting [ArXiv-2023]</span>
 
