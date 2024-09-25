@@ -10,7 +10,7 @@ This repo contains a comprehensive list of our research works related to **scene
 
 <a href="https://arxiv.org/abs/2401.17904"><img  src="https://img.shields.io/badge/arxiv-Paper-brightgreen" ></a> <a href="https://github.com/ymy-k/Hi-SAM"><img src="https://img.shields.io/github/stars/ymy-k/Hi-SAM.svg?logo=github&label=Stars"></a>
 
-[2. GoMatching: A Simple Baseline for Video Text Spotting via Long and Short Term Matching [ArXiv-2024]](#gomatching)
+[2. GoMatching: A Simple Baseline for Video Text Spotting via Long and Short Term Matching [NeurIPS-2024]](#gomatching)
 
 <a href="https://arxiv.org/abs/2401.07080"><img  src="https://img.shields.io/badge/arxiv-Paper-brightgreen" ></a> <a href="https://github.com/Hxyz-123/GoMatching"><img src="https://img.shields.io/github/stars/Hxyz-123/GoMatching.svg?logo=github&label=Stars"></a>
 
@@ -44,7 +44,7 @@ We propose the first unified model, Hi-SAM, for segmenting text across **stroke,
 
 ***
 
-### <span id="gomatching">📘 GoMatching: A Simple Baseline for Video Text Spotting via Long and Short Term Matching [ArXiv-2024]</span>
+### <span id="gomatching">📘 GoMatching: A Simple Baseline for Video Text Spotting via Long and Short Term Matching [NeurIPS-2024]</span>
 
 <em>Haibin He, Maoyuan Ye, Jing Zhang, Juhua Liu, and Dacheng Tao</em>.
 
