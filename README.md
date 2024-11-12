@@ -36,7 +36,7 @@ This repo contains a comprehensive list of our research works related to **scene
 
 <em>Maoyuan Ye, Jing Zhang, Juhua Liu, Chenyu Liu, Baocai Yin, Cong Liu, Bo Du, and Dacheng Tao</em>.
 
-[Paper](https://arxiv.org/abs/2401.17904) | [Github Code](https://github.com/ymy-k/Hi-SAM) | [BibTex](./assets/ArXiv_2024_Hi-SAM/Hi-SAM.bib)
+[Paper](https://arxiv.org/abs/2401.17904) | [Github Code](https://github.com/ymy-k/Hi-SAM) | [BibTex](./assets/TPAMI_2024_Hi-SAM/Hi-SAM.bib)
 
 We propose the first unified model, Hi-SAM, for segmenting text across **stroke, word, text-line, and paragraph hierarchies**. Hi-SAM also achieves **layout analysis** as a by-product. Hi-SAM supports both **automatic mask generation and interactive promptable mode**. Given a single-point prompt, Hi-SAM provides word, text-line, and paragraph masks.
 
@@ -48,7 +48,7 @@ We propose the first unified model, Hi-SAM, for segmenting text across **stroke,
 
 <em>Haibin He, Maoyuan Ye, Jing Zhang, Juhua Liu, and Dacheng Tao</em>.
 
-[Paper](https://arxiv.org/abs/2401.07080) | [Github Code](https://github.com/Hxyz-123/GoMatching) | [BibTex](./assets/ArXiv_2024_GoMatching/GoMatching.bib)
+[Paper](https://arxiv.org/abs/2401.07080) | [Github Code](https://github.com/Hxyz-123/GoMatching) | [BibTex](./assets/NeurIPS_2024_GoMatching/GoMatching.bib)
 
 We identify a main bottleneck in the state-of-the-art video text spotter: the limited recognition capability. In response to this issue, we propose to efficiently turn an off-the-shelf query-based image text spotter into a specialist on video and present a simple baseline termed GoMatching. We establish the ArTVideo test set for addressing the absence of curved texts in current video text spotting datasets and evaluating the performance of video text spotters on videos with arbitrary-shaped text. ArTVideo contains 20 video clips, featuring 30% curved text approximately.
 
