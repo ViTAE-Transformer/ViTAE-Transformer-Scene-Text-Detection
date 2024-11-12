@@ -6,7 +6,7 @@ This repo contains a comprehensive list of our research works related to **scene
 
 ## Overview
 
-[1. Hi-SAM: Marrying Segment Anything Model for Hierarchical Text Segmentation [ArXiv'24]](#hisam)
+[1. Hi-SAM: Marrying Segment Anything Model for Hierarchical Text Segmentation [TPAMI'24]](#hisam)
 
 <a href="https://arxiv.org/abs/2401.17904"><img  src="https://img.shields.io/badge/arxiv-Paper-brightgreen" ></a> <a href="https://github.com/ymy-k/Hi-SAM"><img src="https://img.shields.io/github/stars/ymy-k/Hi-SAM.svg?logo=github&label=Stars"></a>
 
@@ -32,7 +32,7 @@ This repo contains a comprehensive list of our research works related to **scene
 
 ## Projects
 
-### <span id="hisam">📘 Hi-SAM: Marrying Segment Anything Model for Hierarchical Text Segmentation [ArXiv'24]</span>
+### <span id="hisam">📘 Hi-SAM: Marrying Segment Anything Model for Hierarchical Text Segmentation [TPAMI'24]</span>
 
 <em>Maoyuan Ye, Jing Zhang, Juhua Liu, Chenyu Liu, Baocai Yin, Cong Liu, Bo Du, and Dacheng Tao</em>.
 
@@ -40,7 +40,7 @@ This repo contains a comprehensive list of our research works related to **scene
 
 We propose the first unified model, Hi-SAM, for segmenting text across **stroke, word, text-line, and paragraph hierarchies**. Hi-SAM also achieves **layout analysis** as a by-product. Hi-SAM supports both **automatic mask generation and interactive promptable mode**. Given a single-point prompt, Hi-SAM provides word, text-line, and paragraph masks.
 
-<img src="./assets/ArXiv_2024_Hi-SAM/overview.png" width="100%">
+<img src="./assets/TPAMI_2024_Hi-SAM/overview.jpg" width="100%">
 
 ***
 
@@ -52,7 +52,7 @@ We propose the first unified model, Hi-SAM, for segmenting text across **stroke,
 
 We identify a main bottleneck in the state-of-the-art video text spotter: the limited recognition capability. In response to this issue, we propose to efficiently turn an off-the-shelf query-based image text spotter into a specialist on video and present a simple baseline termed GoMatching. We establish the ArTVideo test set for addressing the absence of curved texts in current video text spotting datasets and evaluating the performance of video text spotters on videos with arbitrary-shaped text. ArTVideo contains 20 video clips, featuring 30% curved text approximately.
 
-<img src="./assets/ArXiv_2024_GoMatching/framework.png" width="100%">
+<img src="./assets/NeurIPS_2024_GoMatching/framework.png" width="100%">
 
 ***
 
